@@ -1,5 +1,18 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+import SearchBar from './components/SearchBar.vue'
+
+const search = ref('')
+const selectedSuburb = ref('')
+
+function runSearch(suburbName: string) {
+  const cleaned = suburbName.trim()
+  if (!cleaned) return
+
+  search.value = cleaned
+  selectedSuburb.value = cleaned
+}
 </script>
 
 <template>
@@ -7,7 +20,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <div class="container">
       <div class="row border border-light-subtle align-items-start">
         <img alt="livability logo" class="logo col-4 my-auto" src="@/assets/logo.svg" width="125" height="125" />
-        <div class = "col-4 my-auto">
+        <div class="col-4 my-auto">
           <nav>
             <RouterLink to="/">Dashboard</RouterLink>
             <RouterLink to="/FindYourMatch">Find your match</RouterLink>
@@ -15,14 +28,12 @@ import { RouterLink, RouterView } from 'vue-router'
             <RouterLink to="/about">About</RouterLink>
           </nav>
         </div>
-        <div class = "col-4 my-auto">
-            <input
-            type="search"
-            class="form-control rounded-pill px-4"
-            placeholder="Search..."
-            style="width: 300px"
-            />
-          </div>
+        <div class="col-4 my-auto">
+          <SearchBar
+          v-model="search"
+          @search="runSearch"
+          />
+        </div>
       </div>
     </div>
   </header>
@@ -31,7 +42,6 @@ import { RouterLink, RouterView } from 'vue-router'
 </template>
 
 <style scoped>
-
 nav a.router-link-exact-active {
   color: #00C2FF;
 }
@@ -52,5 +62,4 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
-
 </style>
