@@ -5,13 +5,25 @@ import SearchBar from './components/SearchBar.vue'
 
 const search = ref('')
 const selectedSuburb = ref('')
+const selectedInfo = ref('')
 
-function runSearch(suburbName: string) {
-  const cleaned = suburbName.trim()
+
+function formatSuburbName(input: string) {
+  return input
+    .trim()
+    .toLowerCase()
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+}
+
+function runSearch(suburbName: string, info?: string | null) {
+  const cleaned = formatSuburbName(suburbName)
   if (!cleaned) return
 
   search.value = cleaned
   selectedSuburb.value = cleaned
+  selectedInfo.value = info || ''
 }
 </script>
 
@@ -38,7 +50,11 @@ function runSearch(suburbName: string) {
     </div>
   </header>
 
-  <RouterView />
+  <RouterView
+  :selectedSuburb="selectedSuburb"
+  :selectedInfo="selectedInfo"
+  :setSelectedSuburb="runSearch"
+/>
 </template>
 
 <style scoped>

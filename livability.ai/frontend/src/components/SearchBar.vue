@@ -40,14 +40,6 @@ const emit = defineEmits(['update:modelValue', 'search'])
 
 const inputValue = ref(props.modelValue)
 
-// keep input synced with parent
-watch(
-  () => props.modelValue,
-  (val) => {
-    inputValue.value = val
-  }
-)
-
 // update parent when typing
 watch(inputValue, (val) => {
   emit('update:modelValue', val)
@@ -55,5 +47,6 @@ watch(inputValue, (val) => {
 
 function handleSearch() {
   emit('search', inputValue.value)
+  inputValue.value = ""
 }
 </script>
