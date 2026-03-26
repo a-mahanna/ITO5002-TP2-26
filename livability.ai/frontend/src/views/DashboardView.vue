@@ -26,16 +26,15 @@ watch(
   () => props.selectedInfo,
   (newInfo) => {
     if (!newInfo) return
-  },{ immediate: true }
-  )
+  }, { immediate: true }
+)
 </script>
 
 <template>
   <div class="container">
     <div class="row justify-content-center border border-light-subtle">
       <div class="col-9">
-        <MapView  :selectedSuburb="props.selectedSuburb"
-  @suburb-selected="handleMapClick" />
+        <MapView :selectedSuburb="props.selectedSuburb" @suburb-selected="handleMapClick" />
       </div>
 
       <div class="col-3 border border-light-subtle">
