@@ -22,6 +22,15 @@ const emit = defineEmits<{
   (e: 'suburb-selected', payload: { suburbName: string; info: string | null }): void
 }>()
 
+function formatSuburbName(input: string) {
+  return input
+    .trim()
+    .toLowerCase()
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+}
+
 function getSuburbStyle() {
   return {
     color: '#495057',
@@ -58,11 +67,8 @@ function getSuburbName(feature: any) {
 }
 
 function getSuburbInfo(feature: any) {
-  return (
-    feature?.properties?.DETAILS ||
-    null
-  )
-} //cant get it to work yet
+  return feature?.properties?.DETAILS || null
+}
 
 function highlightSelectedSuburb(name: string | null | undefined) {
   if (!suburbLayer) return
@@ -100,33 +106,34 @@ onMounted(async () => {
   suburbLayer = L.geoJSON(data, {
     style: getSuburbStyle,
     onEachFeature: (feature, layer) => {
-  const suburbName = getSuburbName(feature)
-  const suburbInfo = getSuburbInfo(feature)
+      const suburbName = formatSuburbName(getSuburbName(feature))
+      const suburbInfo = getSuburbInfo(feature)
 
-  layer.on({
-    mouseover: (e) => {
-      if (e.target !== selectedLayer) {
-        e.target.setStyle(getHoverStyle())
-      }
-    },
-    mouseout: (e) => {
-      if (e.target !== selectedLayer) {
-        suburbLayer?.resetStyle(e.target)
-      }
-    },
-    click: (e) => {
-      const clickedLayer = e.target
-      highlightSelectedSuburb(suburbName)
-      map?.fitBounds(clickedLayer.getBounds(), { padding: [20, 20] })
-      emit('suburb-selected', {
-        suburbName,
-        info: suburbInfo,
+      layer.on({
+        mouseover: (e) => {
+          if (e.target !== selectedLayer) {
+            e.target.setStyle(getHoverStyle())
+          }
+        },
+        mouseout: (e) => {
+          if (e.target !== selectedLayer) {
+            suburbLayer?.resetStyle(e.target)
+          }
+        },
+        click: (e) => {
+          const clickedLayer = e.target
+          highlightSelectedSuburb(suburbName)
+          map?.fitBounds(clickedLayer.getBounds(), { padding: [20, 20] })
+
+          emit('suburb-selected', {
+            suburbName,
+            info: suburbInfo,
+          })
+        },
       })
-    },
-  })
 
-  layer.bindPopup(`<strong>${suburbName}</strong>`)
-}
+      layer.bindPopup(`<strong>${suburbName}</strong>`)
+    },
   }).addTo(map)
 
   highlightSelectedSuburb(props.selectedSuburb)

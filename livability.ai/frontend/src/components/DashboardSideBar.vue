@@ -11,13 +11,13 @@ const props = defineProps<{
 
 <template>
   <div class="container sidebar">
-  <div class="card rounded-pill text-center" label="Selected Area">
+  <div class="card align-items-center my-3" label="Selected Area">
     <p>{{ props.suburb }}</p>
   </div>
-  <div class="card text-center">
+  <div class="card align-items-center my-3">
     <p>{{ props.info }}</p>>
   </div>
-  <div class="card">
+  <div class="card align-items-center my-3">
     comparison to City average
   </div>
   </div>

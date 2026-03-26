@@ -2,13 +2,13 @@
 import { watch } from 'vue'
 import MapView from '../components/MapView.vue'
 import DashboardSideBar from '@/components/DashboardSideBar.vue'
-
+import MetricsBar from '@/components/MetricsBar.vue'
 
 
 const props = defineProps<{
   selectedSuburb?: string | null
   selectedInfo?: string | null
-  setSelectedSuburb?: (name: string) => void
+  setSelectedSuburb?: (name: string, info: string | null) => void
 }>()
 
 function handleMapClick(payload: { suburbName: string; info: string | null }) {
@@ -40,6 +40,9 @@ watch(
       <div class="col-3 border border-light-subtle">
         <DashboardSideBar :suburb="props.selectedSuburb" :info="props.selectedInfo" />
       </div>
+    </div>
+    <div class="row justify-content-center border border-light-subtle">
+      <MetricsBar />
     </div>
   </div>
 </template>
