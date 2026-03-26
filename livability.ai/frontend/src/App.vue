@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRouter } from 'vue-router'
 import SearchBar from './components/SearchBar.vue'
 import geojsonDataUrl from './data/melbournesuburbetymologywithgeometry.geojson?url'
+
+const router = useRouter()
 
 const search = ref('')
 const selectedSuburb = ref('')
@@ -13,6 +15,7 @@ const suburbInfoMap = ref<Record<string, string>>({})
 function formatSuburbName(input: string) {
   return input
     .trim()
+    .replace(/\s+/g, ' ')
     .toLowerCase()
     .split(' ')
     .map(word => word.charAt(0).toUpperCase() + word.slice(1))
@@ -27,7 +30,7 @@ async function loadSuburbInfo() {
     const map: Record<string, string> = {}
 
     for (const feature of data.features ?? []) {
-      const suburbName =
+      const rawSuburbName =
         feature?.properties?.LOCALITY ||
         feature?.properties?.GAZLOC ||
         ''
@@ -36,8 +39,10 @@ async function loadSuburbInfo() {
         feature?.properties?.DETAILS ||
         ''
 
+      const suburbName = formatSuburbName(String(rawSuburbName))
+
       if (suburbName) {
-        map[String(suburbName).trim().toUpperCase()] = suburbInfo.formatSuburbName()
+        map[suburbName] = String(suburbInfo)
       }
     }
 
@@ -56,8 +61,12 @@ function setSelectedSuburb(suburbName: string, info?: string | null) {
   selectedInfo.value = info ?? suburbInfoMap.value[cleaned] ?? ''
 }
 
-function runSearch(suburbName: string) {
+async function runSearch(suburbName: string) {
   setSelectedSuburb(suburbName)
+
+  if (router.currentRoute.value.path !== '/') {
+    await router.push('/')
+  }
 }
 
 onMounted(() => {

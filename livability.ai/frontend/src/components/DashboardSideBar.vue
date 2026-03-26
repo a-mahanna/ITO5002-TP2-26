@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { watch, ref } from 'vue'
-
 
 const props = defineProps<{
   suburb?: string | null
@@ -10,15 +8,18 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="container sidebar">
-  <div class="card align-items-center my-3" label="Selected Area">
-    <p>{{ props.suburb }}</p>
+  <div class="container">
+    <label for="suburbname" class="form-label mt-3">Selected Suburb</label>
+    <div class="card align-items-center mb-3" id="suburbname">
+      <p>{{ props.suburb }}</p>
+    </div>
+    <label for="suburbinfo" class="form-label mt-3">Suburb Information</label>
+    <div class="card align-items-center mb-3" id="suburbinfo">
+      <p>{{ props.info }}</p>
+    </div>
+    <label for="averagecompare" class="form-label mt-3">Comparison to City Average</label>
+    <div class="card align-items-center mb-3" id="averagecompare">
+      comparison to City average
+    </div>
   </div>
-  <div class="card align-items-center my-3">
-    <p>{{ props.info }}</p>>
-  </div>
-  <div class="card align-items-center my-3">
-    comparison to City average
-  </div>
-  </div>
-  </template>
+</template>
