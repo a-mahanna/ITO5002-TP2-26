@@ -1,16 +1,12 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import { RouterLink, RouterView, useRouter } from 'vue-router'
 import SearchBar from './components/SearchBar.vue'
-import geojsonDataUrl from './data/melbournesuburbetymologywithgeometry.geojson?url'
 
 const router = useRouter()
 
 const search = ref('')
 const selectedSuburb = ref('')
-const selectedInfo = ref('')
-
-const suburbInfoMap = ref<Record<string, string>>({})
 
 function formatSuburbName(input: string) {
   return input
@@ -22,43 +18,12 @@ function formatSuburbName(input: string) {
     .join(' ')
 }
 
-async function loadSuburbInfo() {
-  try {
-    const response = await fetch(geojsonDataUrl)
-    const data = await response.json()
-
-    const map: Record<string, string> = {}
-
-    for (const feature of data.features ?? []) {
-      const rawSuburbName =
-        feature?.properties?.LOCALITY ||
-        feature?.properties?.GAZLOC ||
-        ''
-
-      const suburbInfo =
-        feature?.properties?.DETAILS ||
-        ''
-
-      const suburbName = formatSuburbName(String(rawSuburbName))
-
-      if (suburbName) {
-        map[suburbName] = String(suburbInfo)
-      }
-    }
-
-    suburbInfoMap.value = map
-  } catch (error) {
-    console.error('Failed to load suburb info:', error)
-  }
-}
-
-function setSelectedSuburb(suburbName: string, info?: string | null) {
+function setSelectedSuburb(suburbName: string) {
   const cleaned = formatSuburbName(suburbName)
   if (!cleaned) return
 
   search.value = cleaned
   selectedSuburb.value = cleaned
-  selectedInfo.value = info ?? suburbInfoMap.value[cleaned] ?? ''
 }
 
 async function runSearch(suburbName: string) {
@@ -68,16 +33,12 @@ async function runSearch(suburbName: string) {
     await router.push('/')
   }
 }
-
-onMounted(() => {
-  loadSuburbInfo()
-})
 </script>
 
 <template>
   <header>
     <div class="container">
-      <div class="row border border-light-subtle align-items-start">
+      <div class="row align-items-start">
         <img
           alt="livability logo"
           class="logo col-4 my-auto"
@@ -107,7 +68,6 @@ onMounted(() => {
 
   <RouterView
     :selectedSuburb="selectedSuburb"
-    :selectedInfo="selectedInfo"
     :setSelectedSuburb="setSelectedSuburb"
   />
 </template>
