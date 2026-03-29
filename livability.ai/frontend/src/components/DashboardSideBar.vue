@@ -141,27 +141,21 @@ function formatCurrency(value: number | null | undefined) {
 
     <p class="mb-2">
       <strong>Crime: </strong>
-      <span
-        :class="getDeviationClass(props.suburbData?.crime_rate, props.averages?.crime_rate, false)"
-      >
+      <span>
         {{ getDeviationText(props.suburbData?.crime_rate, props.averages?.crime_rate) }}
       </span>
     </p>
 
     <p class="mb-2">
       <strong>Transport: </strong>
-      <span
-        :class="getDeviationClass(props.suburbData?.transport_score, props.averages?.transport_score, true)"
-      >
+      <span>
         {{ getDeviationText(props.suburbData?.transport_score, props.averages?.transport_score) }}
       </span>
     </p>
 
     <p class="mb-0">
       <strong>PT Score: </strong>
-      <span
-        :class="getDeviationClass(props.suburbData?.pt_score, props.averages?.pt_score, true)"
-      >
+      <span>
         {{ getDeviationText(props.suburbData?.pt_score, props.averages?.pt_score) }}
       </span>
     </p>
