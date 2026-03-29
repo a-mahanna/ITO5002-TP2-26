@@ -158,9 +158,6 @@ async function runSearch() {
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-start mb-2">
                 <h5 class="card-title mb-0">{{ item.suburb }}</h5>
-                <span class="badge text-bg-dark">
-                  Score: {{ item.preference_score }}
-                </span>
               </div>
 
               <p class="mb-2">
