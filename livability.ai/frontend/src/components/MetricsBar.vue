@@ -25,7 +25,8 @@ function formatCurrency(value: number | null | undefined) {
 <div class="container mt-5">
   <div class="row g-3 align-items-stretch">
 
-    <div class="col-12 col-md-4 d-flex">
+
+    <!--<div class="col-12 col-md-4 d-flex">
       <div class="card flex-fill shadow-sm" id="scores">
         <div class="card-body">
           <h6 class="form-label">Livability Scores</h6>
@@ -44,7 +45,7 @@ function formatCurrency(value: number | null | undefined) {
           </p>
         </div>
       </div>
-    </div>
+    </div>-->
 
     <div class="col-12 col-md-4 d-flex">
       <div class="card flex-fill shadow-sm" id="rentbreakdown">

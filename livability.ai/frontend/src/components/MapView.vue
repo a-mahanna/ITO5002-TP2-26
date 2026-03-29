@@ -82,12 +82,12 @@ function getMetricValue(suburbName: string, metric: MetricKey): number | null {
 }
 
 function getChoroplethColor(value: number | null | undefined) {
-  if (value === null || value === undefined) return '#dee2e6'
-  if (value >= 85) return '#2b8a3e'
-  if (value >= 70) return '#66a80f'
-  if (value >= 55) return '#fab005'
-  if (value >= 40) return '#fd7e14'
-  return '#e03131'
+  /*if (value === null || value === undefined)*/ return '#dee2e6'
+  //if (value >= 85) return '#2b8a3e'
+  //if (value >= 70) return '#66a80f'
+  //if (value >= 55) return '#fab005'
+  //if (value >= 40) return '#fd7e14'
+  //return '#e03131'
 }
 
 function getSuburbStyle(feature?: any) {
@@ -213,8 +213,8 @@ onMounted(async () => {
     style: (feature) => getSuburbStyle(feature as any),
     onEachFeature: (feature, layer) => {
       const suburbName = getSuburbName(feature)
-      const metricValue = getMetricValue(suburbName, props.metric)
-      const metricLabel = getMetricLabel(props.metric)
+      //const metricValue = getMetricValue(suburbName, props.metric)
+      //const metricLabel = getMetricLabel(props.metric)
 
       layer.on({
         mouseover: (e) => {
