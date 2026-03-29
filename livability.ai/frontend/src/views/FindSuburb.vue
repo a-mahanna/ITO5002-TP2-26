@@ -1,4 +1,4 @@
-<script lang="ts">
+<script setup lang="ts">
 const minBudget = 0
 const maxBudget = 10000
 const minCrime = 0
