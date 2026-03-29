@@ -165,7 +165,7 @@ function highlightSelectedSuburb(
 }
 
 async function loadSuburbScores() {
-  const response = await fetch('http://localhost:8000/api/v1/suburbs/all')
+  const response = await fetch('https://ito5002-tp2-26.onrender.com/api/v1/suburbs/all')
   if (!response.ok) {
     throw new Error('Failed to fetch suburb map data')
   }
