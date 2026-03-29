@@ -134,9 +134,7 @@ function formatCurrency(value: number | null | undefined) {
   <div class="card-body">
     <p class="mb-2">
       <strong>Median Rent: </strong>
-      <span
-        :class="getDeviationClass(props.suburbData?.median_rent, props.averages?.median_rent, false)"
-      >
+      <span>
         {{ getDeviationText(props.suburbData?.median_rent, props.averages?.median_rent) }}
       </span>
     </p>
