@@ -48,6 +48,75 @@ export interface AveragesApiResponse {
   [key: string]: unknown
 }
 
+export interface RecommendResult {
+  suburb: string
+  preference_score: number
+  rent: number | null
+  scores?: {
+    rent_score?: number | null
+    safety_score?: number | null
+    transport_score?: number | null
+  }
+  transport?: {
+    bus_stops?: number | null
+    train_stops?: number | null
+    tram_stops?: number | null
+    total_stops?: number | null
+    weighted_score?: number | null
+  }
+  crime?: {
+    total_offences?: number | null
+  }
+  explanation?: string | null
+  distance_to_cbd_km?: number | null
+}
+
+export interface RecommendApiResponse {
+  budget: number
+  property_type: string
+  weights: {
+    safety: number
+    transport: number
+  }
+  count: number
+  message?: string
+  recommendations: RecommendResult[]
+}
+
+export async function fetchRecommendations(params: {
+  budget: number
+  propertyType: string
+  safetyWeight: number
+  transportWeight: number
+  n?: number
+}): Promise<RecommendApiResponse> {
+  const query = new URLSearchParams({
+    budget: String(params.budget),
+    property_type: params.propertyType,
+    safety_weight: String(params.safetyWeight),
+    transport_weight: String(params.transportWeight),
+    n: String(params.n ?? 10),
+  })
+
+  const url = `${API_BASE_URL}/api/v2/recommend?${query.toString()}`
+  console.log('Fetching recommendations from:', url)
+
+  let response: Response
+
+  try {
+    response = await fetch(url)
+  } catch (err) {
+    throw new Error(`Network error while fetching recommendations from ${url}`)
+  }
+
+  if (!response.ok) {
+    const text = await response.text()
+    throw new Error(`Failed to fetch recommendations: ${response.status} ${text}`)
+  }
+
+  return response.json()
+}
+
 function normaliseName(name: string) {
   return name.trim()
 }

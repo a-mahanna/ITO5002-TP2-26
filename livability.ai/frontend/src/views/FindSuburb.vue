@@ -1,68 +1,198 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { fetchRecommendations, type RecommendApiResponse } from '@/services/api'
 
-const minBudget = 0
-const maxBudget = 10000
-const minCrime = 0
-const maxCrime = 100
-const minTransport = 0
-const maxTransport = 100
+const propertyType = ref('2bed_flat')
+const budget = ref(700)
+const safetyWeight = ref(0.5)
+const transportWeight = ref(0.5)
+const results = ref<RecommendApiResponse | null>(null)
+const loading = ref(false)
+const error = ref('')
 
-const budget = ref(500)
-const crimeFactor = ref(50)
-const transportFactor = ref(50)
+const propertyOptions = [
+  { label: '1 bed flat', value: '1bed_flat' },
+  { label: '2 bed flat', value: '2bed_flat' },
+  { label: '3 bed flat', value: '3bed_flat' },
+  { label: '2 bed house', value: '2bed_house' },
+  { label: '3 bed house', value: '3bed_house' },
+  { label: '4 bed house', value: '4bed_house' },
+]
+
+function formatCurrency(value: number | null | undefined) {
+  if (value === null || value === undefined) return '—'
+  return `$${value}/week`
+}
+
+function formatValue(value: number | null | undefined) {
+  if (value === null || value === undefined) return '—'
+  return String(value)
+}
+
+async function runSearch() {
+  loading.value = true
+  error.value = ''
+
+  try {
+    results.value = await fetchRecommendations({
+      budget: budget.value,
+      propertyType: propertyType.value,
+      safetyWeight: safetyWeight.value,
+      transportWeight: transportWeight.value,
+      n: 12,
+    })
+  } catch (err) {
+  console.error('Search failed:', err)
+  results.value = null
+  error.value = err instanceof Error ? err.message : 'Failed to fetch results'
+} finally {
+    loading.value = false
+  }
+}
+
 </script>
 
 <template>
-  <div
-    class="container d-flex flex-column align-items-center justify-content-center border border-light-subtle p-5 rounded"
+  <div class="container py-4">
+    <div class="card border border-light-subtle shadow-sm mb-4">
+      <div class="card-body">
+        <h1 class="mb-3 text-center">Find Your Match</h1>
+
+        <p class="text-center text-muted mb-4">
+          Select your property type, budget, and how much you care about safety and
+          transport. We’ll rank matching suburbs for you.
+        </p>
+
+        <div class="row g-3">
+          <div class="col-12 col-md-6">
+            <label for="propertyType" class="form-label">Property Type</label>
+<select id="propertyType" v-model="propertyType" class="form-select">
+  <option
+    v-for="option in propertyOptions"
+    :key="option.value"
+    :value="option.value"
   >
-    <div class="row">
-      <h1 class="mb-4 text-center">Find Your Match</h1>
-      <p class="mb-4 text-center">
-        Use our suburb search to find the best match for your lifestyle. Whether you're
-        looking for a quiet neighborhood, easy access to public transport, or budget
-        friendly options, our search tool will help you discover the perfect suburb that
-        fits your needs.
-      </p>
-      <p class="mb-4 text-center">
-        Simply enter your preferences and let our algorithm do the work. Find your ideal
-        suburb today and start living your best life!
-      </p>
+    {{ option.label }}
+  </option>
+</select>
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="budget" class="form-label">Maximum Budget: ${{ budget }}/week</label>
+            <input
+              id="budget"
+              v-model="budget"
+              type="range"
+              class="form-range"
+              min="200"
+              max="2000"
+              step="10"
+            />
+            <input
+              v-model="budget"
+              type="number"
+              class="form-control"
+              min="200"
+              max="2000"
+              step="10"
+            />
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="safetyWeight" class="form-label">
+              Safety Importance: {{ Math.round(safetyWeight * 100) }}%
+            </label>
+            <input
+              id="safetyWeight"
+              v-model="safetyWeight"
+              type="range"
+              class="form-range"
+              min="0"
+              max="1"
+              step="0.1"
+            />
+          </div>
+
+          <div class="col-12 col-md-6">
+            <label for="transportWeight" class="form-label">
+              Transport Importance: {{ Math.round(transportWeight * 100) }}%
+            </label>
+            <input
+              id="transportWeight"
+              v-model="transportWeight"
+              type="range"
+              class="form-range"
+              min="0"
+              max="1"
+              step="0.1"
+            />
+          </div>
+
+          <div class="col-12 d-grid d-md-flex justify-content-md-end">
+            <button class="btn btn-primary px-4" @click="runSearch" :disabled="loading">
+              {{ loading ? 'Searching...' : 'Find Matches' }}
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="row w-100 d-flex">
-      <div class="mb-4">
-        <label class="form-label">Enter your budget: {{ budget }}</label>
-        <input
-          v-model="budget"
-          type="range"
-          class="form-range"
-          :min="minBudget"
-          :max="maxBudget"
-        />
-      </div>
+    <div v-if="error" class="alert alert-danger">
+      {{ error }}
+    </div>
 
-      <div class="mb-4">
-        <label class="form-label">Crime Rate Factor: {{ crimeFactor }}</label>
-        <input
-          v-model="crimeFactor"
-          type="range"
-          class="form-range"
-          :min="minCrime"
-          :max="maxCrime"
-        />
-      </div>
+    <div v-if="results?.message" class="alert alert-warning">
+      {{ results.message }}
+    </div>
 
-      <div class="mb-2">
-        <label class="form-label">Public Transport Access Factor: {{ transportFactor }}</label>
-        <input
-          v-model="transportFactor"
-          type="range"
-          class="form-range"
-          :min="minTransport"
-          :max="maxTransport"
-        />
+    <div v-if="results?.recommendations?.length" class="mb-3">
+      <h3 class="mb-3">Recommended Suburbs</h3>
+
+      <div class="row g-3">
+        <div
+          v-for="item in results.recommendations"
+          :key="item.suburb"
+          class="col-12 col-lg-6"
+        >
+          <div class="card h-100 shadow-sm border border-light-subtle">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <h5 class="card-title mb-0">{{ item.suburb }}</h5>
+                <span class="badge text-bg-dark">
+                  Score: {{ item.preference_score }}
+                </span>
+              </div>
+
+              <p class="mb-2">
+                <strong>Rent:</strong> {{ formatCurrency(item.rent) }}
+              </p>
+
+              <p class="mb-2">
+                <strong>Safety Score:</strong>
+                {{ formatValue(item.scores?.safety_score) }}
+              </p>
+
+              <p class="mb-2">
+                <strong>Transport Score:</strong>
+                {{ formatValue(item.scores?.transport_score) }}
+              </p>
+
+              <p class="mb-2">
+                <strong>Total Stops:</strong>
+                {{ formatValue(item.transport?.total_stops) }}
+              </p>
+
+              <p class="mb-2">
+                <strong>Distance to CBD:</strong>
+                {{ item.distance_to_cbd_km ?? '—' }} km
+              </p>
+
+              <p class="mb-0 text-muted">
+                {{ item.explanation ?? 'No explanation available.' }}
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

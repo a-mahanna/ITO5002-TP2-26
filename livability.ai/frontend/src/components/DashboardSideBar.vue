@@ -10,10 +10,6 @@ const props = defineProps<{
   selectedMetric?: 'safety_score' | 'transport_score' | 'rent_score'
 }>()
 
-const emit = defineEmits<{
-  (e: 'update-metric', value: 'safety_score' | 'transport_score' | 'rent_score'): void
-}>()
-
 function displayName() {
   return (
     props.suburbData?.name ||
