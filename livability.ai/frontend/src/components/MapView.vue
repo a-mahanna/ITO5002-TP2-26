@@ -1,7 +1,10 @@
 <template>
+  <div class="container mt-2">
   <div class="map-wrapper" ref="mapEl">
     <div id="map" class="map-canvas"></div>
   </div>
+  </div>
+
 </template>
 
 <script setup lang="ts">
