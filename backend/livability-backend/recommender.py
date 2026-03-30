@@ -26,6 +26,7 @@ class SuburbRecommender:
             safety = s["scores"].get("safety_score")
             transport = s["scores"].get("transport_score")
 
+            # Only include suburbs with at least rent + safety
             if rent is not None and safety is not None:
                 self.feature_names.append(s["name"])
                 features.append([
@@ -57,11 +58,8 @@ class SuburbRecommender:
         for i in range(n_clusters):
             mask = self.cluster_labels == i
             cluster_features = self.feature_matrix[mask]
-            cluster_suburbs = [
-                self.feature_names[j]
-                for j in range(len(self.feature_names))
-                if mask[j]
-            ]
+            cluster_suburbs = [self.feature_names[j]
+                               for j in range(len(self.feature_names)) if mask[j]]
 
             self.clusters[i] = {
                 "cluster_id": i,
@@ -74,6 +72,9 @@ class SuburbRecommender:
 
         print(f"  Clusters: {n_clusters} groups created")
 
+    # =============================================
+    # FEATURE 1: EXPLAINABILITY
+    # =============================================
     def explain(self, suburb_name, budget=None):
         """Generate plain-English explanation for a suburb."""
         key = suburb_name.lower()
@@ -84,6 +85,7 @@ class SuburbRecommender:
         name = s["name"]
         parts = []
 
+        # Rent
         rent_2bed = s["rent"].get("2bed_flat")
         if rent_2bed is not None:
             text = f"The median rent for a 2-bedroom flat is ${int(rent_2bed)}/week"
@@ -95,26 +97,22 @@ class SuburbRecommender:
                     text += f", which exceeds your budget of ${int(budget)}"
             parts.append(text)
 
+        # Crime
         offences = s["crime"].get("total_offences")
         if offences is not None:
-            all_offences = [
-                sub["crime"]["total_offences"]
-                for sub in self.suburbs_list
-                if sub["crime"].get("total_offences") is not None
-            ]
+            all_offences = [sub["crime"]["total_offences"]
+                           for sub in self.suburbs_list
+                           if sub["crime"].get("total_offences") is not None]
             if all_offences:
                 avg = round(np.mean(all_offences))
                 if offences < avg:
                     diff_pct = round(((avg - offences) / avg) * 100)
-                    parts.append(
-                        f"Total recorded offences ({offences}) are {diff_pct}% below the Melbourne average ({avg})"
-                    )
+                    parts.append(f"Total recorded offences ({offences}) are {diff_pct}% below the Melbourne average ({avg})")
                 else:
                     diff_pct = round(((offences - avg) / avg) * 100)
-                    parts.append(
-                        f"Total recorded offences ({offences}) are {diff_pct}% above the Melbourne average ({avg})"
-                    )
+                    parts.append(f"Total recorded offences ({offences}) are {diff_pct}% above the Melbourne average ({avg})")
 
+        # Transport
         t = s["transport"]
         transport_parts = []
         if t.get("train_stops", 0) > 0:
@@ -129,11 +127,7 @@ class SuburbRecommender:
         if transport_parts:
             parts.append(f"Public transport includes {', '.join(transport_parts)}")
 
-        explanation = (
-            f"{name} — " + ". ".join(parts) + "."
-            if parts
-            else f"{name} — insufficient data for explanation."
-        )
+        explanation = f"{name} — " + ". ".join(parts) + "." if parts else f"{name} — insufficient data for explanation."
 
         return {
             "suburb": name,
@@ -143,6 +137,9 @@ class SuburbRecommender:
             "within_budget": rent_2bed <= budget if (rent_2bed and budget) else None
         }
 
+    # =============================================
+    # FEATURE 2: SIMILARITY
+    # =============================================
     def find_similar(self, suburb_name, n=5):
         """Find most similar suburbs using cosine similarity."""
         key = suburb_name.lower()
@@ -173,6 +170,7 @@ class SuburbRecommender:
                 "scores": sim_data["scores"],
             })
 
+        # Cluster context
         cluster_info = None
         if hasattr(self, "cluster_labels") and len(self.cluster_labels) > 0:
             cluster_id = int(self.cluster_labels[idx])
@@ -191,6 +189,9 @@ class SuburbRecommender:
             "cluster": cluster_info
         }
 
+    # =============================================
+    # RECOMMENDER: MATCH PREFERENCES
+    # =============================================
     def recommend(self, budget, property_type="2bed_flat", safety_weight=0.5,
                   transport_weight=0.5, n=10):
         """Rank suburbs by user preferences."""
@@ -198,7 +199,7 @@ class SuburbRecommender:
 
         candidates = []
         for s in self.suburbs_list:
-            rent = s.get("rent", {}).get(rent_key)
+            rent = s["rent"].get(rent_key)
             if rent is not None and rent <= budget:
                 candidates.append(s)
 
@@ -211,35 +212,26 @@ class SuburbRecommender:
                 "recommendations": []
             }
 
+        # Normalise weights
         total = safety_weight + transport_weight
         w_safety = safety_weight / total if total > 0 else 0.5
         w_transport = transport_weight / total if total > 0 else 0.5
 
         scored = []
         for s in candidates:
-            safety = s.get("scores", {}).get("safety_score")
-            transport = s.get("scores", {}).get("transport_score")
-
-            if safety is None:
-                safety = 50
-            if transport is None:
-                transport = 50
-
+            safety = s["scores"].get("safety_score", 50)
+            transport = s["scores"].get("transport_score", 50)
             pref_score = round((w_safety * safety) + (w_transport * transport), 1)
 
-            explanation = None
-            try:
-                explanation = self.explain(s["name"], budget)
-            except Exception:
-                explanation = None
+            explanation = self.explain(s["name"], budget)
 
             scored.append({
-                "suburb": s.get("name"),
-                "preference_score": float(pref_score),
-                "rent": s.get("rent", {}).get(rent_key),
-                "scores": s.get("scores", {}),
-                "transport": s.get("transport", {}),
-                "crime": s.get("crime", {}),
+                "suburb": s["name"],
+                "preference_score": pref_score,
+                "rent": s["rent"].get(rent_key),
+                "scores": s["scores"],
+                "transport": s["transport"],
+                "crime": s["crime"],
                 "explanation": explanation["explanation"] if explanation else None,
                 "distance_to_cbd_km": s.get("distance_to_cbd_km"),
             })
@@ -254,6 +246,9 @@ class SuburbRecommender:
             "recommendations": scored[:n]
         }
 
+    # =============================================
+    # CLUSTERS
+    # =============================================
     def get_clusters(self):
         """Return cluster summaries."""
         if not self.clusters:
