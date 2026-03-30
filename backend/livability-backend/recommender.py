@@ -26,6 +26,11 @@ class SuburbRecommender:
             safety = s["scores"].get("safety_score")
             transport = s["scores"].get("transport_score")
 
+            if safety is None:
+                safety = 50
+            if transport is None:
+                transport = 50
+
             # Only include suburbs with at least rent + safety
             if rent is not None and safety is not None:
                 self.feature_names.append(s["name"])
