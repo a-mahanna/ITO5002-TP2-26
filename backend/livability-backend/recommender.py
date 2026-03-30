@@ -26,7 +26,7 @@ class SuburbRecommender:
             safety = s["scores"].get("safety_score")
             transport = s["scores"].get("transport_score")
 
-            if safety is None:
+            if safety is None: #added for more safety, as some scores have missing data, returning a null
                 safety = 50
             if transport is None:
                 transport = 50
