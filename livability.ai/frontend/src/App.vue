@@ -33,43 +33,48 @@ async function runSearch(suburbName: string) {
     await router.push('/')
   }
 }
+
+function getLogo() {
+  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    return "src/assets/logo-dark.svg"
+  } else {
+    return "src/assets/logo.svg"
+  }
+}
 </script>
 
 <template>
   <header>
-    <div class="container">
-      <div class="row align-items-start">
-        <img
-          alt="livability logo"
-          class="logo col-4 my-auto"
-          src="@/assets/logo.svg"
-          width="125"
-          height="125"
-        />
+    <!--<div class="container">-->
+    <div class="row align-items-start livability-logo">
+      <img alt="livability logo" class="logo col-3 mx-auto" :src="getLogo()" width="125" height="125" />
 
-        <div class="col-4 my-auto">
-          <nav>
-            <RouterLink to="/">Dashboard</RouterLink>
-            <RouterLink to="/FindYourMatch">Find your match</RouterLink>
-            <RouterLink to="/History">History</RouterLink>
-            <RouterLink to="/about">About</RouterLink>
-          </nav>
-        </div>
+      <div class="row col-6 my-auto mx-auto">
+        <nav class="d-flex justify-content-center">
+          <div>
+            <RouterLink class="translate-middle" to="/Dashboard">Dashboard</RouterLink>
+          </div>
+          <div>
+            <RouterLink class="translate-middle" to="/FindYourMatch">Find your match</RouterLink>
+          </div>
+          <div>
+            <RouterLink class="translate-middle" to="/History">History</RouterLink>
+          </div>
+          <div>
+            <RouterLink class="translate-middle" to="/about">About</RouterLink>
+          </div>
 
-        <div class="col-4 my-auto">
-          <SearchBar
-            v-model="search"
-            @search="runSearch"
-          />
-        </div>
+        </nav>
+      </div>
+
+      <div class="col-2 my-auto mx-auto">
+        <SearchBar v-model="search" @search="runSearch" />
       </div>
     </div>
+    <!--</div>-->
   </header>
 
-  <RouterView
-    :selectedSuburb="selectedSuburb"
-    :setSelectedSuburb="setSelectedSuburb"
-  />
+  <RouterView :selectedSuburb="selectedSuburb" :setSelectedSuburb="setSelectedSuburb" />
 </template>
 
 <style scoped>

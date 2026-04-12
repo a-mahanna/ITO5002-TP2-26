@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-2">
+  <div class="my-auto">
   <div class="map-wrapper" ref="mapEl">
     <div id="map" class="map-canvas"></div>
   </div>
