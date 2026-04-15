@@ -97,27 +97,31 @@ class SuburbRecommender:
                     text += f", which exceeds your budget of ${int(budget)}"
             parts.append(text)
 
-        # Crime
-        offences = s["crime"].get("total_offences")
-        if offences is not None:
-            all_offences = [sub["crime"]["total_offences"]
-                           for sub in self.suburbs_list
-                           if sub["crime"].get("total_offences") is not None]
-            if all_offences:
-                avg = round(np.mean(all_offences))
-                if offences < avg:
-                    diff_pct = round(((avg - offences) / avg) * 100)
-                    parts.append(f"Total recorded offences ({offences}) are {diff_pct}% below the Melbourne average ({avg})")
+        # Crime — use rate per 1,000 population when available
+        rate_1000 = s["crime"].get("offence_rate_1000")
+        population = s["crime"].get("population")
+        if rate_1000 is not None and population is not None and population >= 100:
+            all_rates = [sub["crime"]["offence_rate_1000"]
+                        for sub in self.suburbs_list
+                        if sub["crime"].get("offence_rate_1000") is not None
+                        and (sub["crime"].get("population") or 0) >= 100]
+            if all_rates:
+                avg_rate = round(np.mean(all_rates))
+                if rate_1000 < avg_rate:
+                    diff_pct = round(((avg_rate - rate_1000) / avg_rate) * 100)
+                    parts.append(f"Crime rate is {rate_1000:.0f} offences per 1,000 residents, "
+                                 f"which is {diff_pct}% below the Melbourne average ({avg_rate})")
                 else:
-                    diff_pct = round(((offences - avg) / avg) * 100)
-                    parts.append(f"Total recorded offences ({offences}) are {diff_pct}% above the Melbourne average ({avg})")
+                    diff_pct = round(((rate_1000 - avg_rate) / avg_rate) * 100)
+                    parts.append(f"Crime rate is {rate_1000:.0f} offences per 1,000 residents, "
+                                 f"which is {diff_pct}% above the Melbourne average ({avg_rate})")
 
         # Transport
         t = s["transport"]
         transport_parts = []
         if t.get("train_stops", 0) > 0:
             n = t["train_stops"]
-            transport_parts.append(f"{n} train stop{'s' if n != 1 else ''}")
+            transport_parts.append(f"{n} train station{'s' if n != 1 else ''}")
         if t.get("tram_stops", 0) > 0:
             n = t["tram_stops"]
             transport_parts.append(f"{n} tram stop{'s' if n != 1 else ''}")

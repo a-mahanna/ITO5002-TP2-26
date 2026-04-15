@@ -123,7 +123,7 @@ function formatCurrency(value: number | null | undefined) {
           {{ formatCurrency(props.suburbData?.median_rent) }}
         </p>
         <p class="mb-2">
-          <strong>Total Offences:</strong>
+          <strong>Crime Rate (per 1,000):</strong>
           {{ formatValue(props.suburbData?.crime_rate) }}
         </p>
         <p class="mb-0">

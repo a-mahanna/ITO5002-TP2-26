@@ -195,8 +195,8 @@ onMounted(() => {
             </p>
 
             <p class="mb-2">
-              <strong>Total offences:</strong>
-              {{ formatNumber(item.crime?.total_offences, 0) }}
+              <strong>Crime rate (per 1,000):</strong>
+              {{ formatNumber(item.crime?.offence_rate_1000, 0) }}
             </p>
 
             <p class="mb-1">

@@ -117,6 +117,7 @@ def search(q: str = Query(..., min_length=1)):
             "name": s["name"],
             "rent_2bed": s["rent"].get("2bed_flat"),
             "total_offences": s["crime"].get("total_offences"),
+            "offence_rate_1000": s["crime"].get("offence_rate_1000"),
             "transport_stops": s["transport"].get("total_stops"),
             "scores": s["scores"],
             "distance_to_cbd_km": s.get("distance_to_cbd_km"),

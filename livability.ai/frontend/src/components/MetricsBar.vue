@@ -71,7 +71,7 @@ function transportAccessibilityScore() {
             {{ formatValue(props.suburbData?.transport?.bus_stops) }}
           </p>
           <p class="mb-2">
-            <strong>Train Stops:</strong>
+            <strong>Train Stations:</strong>
             {{ formatValue(props.suburbData?.transport?.train_stops) }}
           </p>
           <p class="mb-2">
@@ -98,11 +98,11 @@ function transportAccessibilityScore() {
             <h6 class="form-label">Crime Rate</h6>
 
             <p class="mb-2">
-              <strong>Total Offences:</strong>
+              <strong>Offences per 1,000 residents:</strong>
               {{ formatValue(props.suburbData?.crime_rate) }}
             </p>
             <p class="mb-0 text-muted small">
-              Total recorded criminal offences for the suburb. Raw offence counts are best used as a general indicator only.
+              Crime rate normalised by population. Suburbs with very small populations (under 100) are excluded from safety scoring.
             </p>
           </div>
         </div>

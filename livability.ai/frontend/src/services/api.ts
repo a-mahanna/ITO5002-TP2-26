@@ -22,6 +22,8 @@ export interface SuburbApiResponse {
   }
   crime?: {
     total_offences?: number | null
+    population?: number | null
+    offence_rate_1000?: number | null
   }
   transport?: {
     bus_stops?: number | null
@@ -72,6 +74,8 @@ export interface RecommendResult {
   }
   crime?: {
     total_offences?: number | null
+    population?: number | null
+    offence_rate_1000?: number | null
   }
   explanation?: string | null
   distance_to_cbd_km?: number | null
@@ -102,6 +106,8 @@ export interface SimilarSuburbResult {
   }
   crime?: {
     total_offences?: number | null
+    population?: number | null
+    offence_rate_1000?: number | null
   }
   transport?: {
     bus_stops?: number | null
@@ -207,7 +213,7 @@ function normaliseSuburbResponse(raw: any): SuburbApiResponse {
     transport_score:
       suburb?.transport_score ?? suburb?.scores?.transport_score ?? null,
     crime_rate:
-      suburb?.crime_rate ?? suburb?.crime?.total_offences ?? null,
+      suburb?.crime_rate ?? suburb?.crime?.offence_rate_1000 ?? null,
     pt_score:
       suburb?.pt_score ?? suburb?.transport?.weighted_score ?? null,
     distance_to_cbd_km: suburb?.distance_to_cbd_km ?? null,
@@ -235,7 +241,7 @@ function normaliseAveragesResponse(raw: any): AveragesApiResponse {
       avg?.transport_score ??
       avg?.weighted_transport_score ??
       null,
-    crime_rate: avg?.crime_rate ?? avg?.total_offences ?? null,
+    crime_rate: avg?.crime_rate ?? avg?.offence_rate_1000 ?? null,
     pt_score: avg?.pt_score ?? avg?.weighted_transport_score ?? null,
   }
 }

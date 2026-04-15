@@ -252,15 +252,15 @@ const displayedSuburbs = computed(() => results.value?.suburbs ?? [])
                   {{ formatNumber(crimeRatePer1000(suburb)) }}
                 </p>
                 <p class="mb-0">
-                  Total offences:
-                  {{ formatNumber(suburb.crime?.total_offences, 0) }}
+                  Crime rate (per 1,000):
+                  {{ formatNumber(suburb.crime?.offence_rate_1000, 0) }}
                 </p>
               </div>
 
               <div>
                 <h3 class="section-heading">Public Transport Accessibility</h3>
                 <p class="mb-1">
-                  Train stops:
+                  Train stations:
                   {{ formatNumber(suburb.transport?.train_stops, 0) }}
                 </p>
                 <p class="mb-1">
