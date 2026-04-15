@@ -48,6 +48,12 @@ export interface AveragesApiResponse {
   [key: string]: unknown
 }
 
+export interface CompareApiResponse {
+  count: number
+  suburbs: SuburbApiResponse[]
+  melbourne_averages?: Record<string, unknown>
+}
+
 export interface RecommendResult {
   suburb: string
   preference_score: number
@@ -81,6 +87,55 @@ export interface RecommendApiResponse {
   count: number
   message?: string
   recommendations: RecommendResult[]
+}
+
+export interface SimilarSuburbResult {
+  suburb: string
+  similarity_score: number
+  rent?: {
+    ['1bed_flat']?: number | null
+    ['2bed_flat']?: number | null
+    ['3bed_flat']?: number | null
+    ['2bed_house']?: number | null
+    ['3bed_house']?: number | null
+    ['4bed_house']?: number | null
+  }
+  crime?: {
+    total_offences?: number | null
+  }
+  transport?: {
+    bus_stops?: number | null
+    train_stops?: number | null
+    tram_stops?: number | null
+    total_stops?: number | null
+    weighted_score?: number | null
+  }
+  scores?: {
+    rent_score?: number | null
+    safety_score?: number | null
+    transport_score?: number | null
+  }
+}
+
+export interface SimilarSuburbsApiResponse {
+  suburb: string
+  similar: SimilarSuburbResult[]
+  cluster?: {
+    cluster_id?: number
+    suburbs_in_cluster?: number
+    avg_rent_score?: number
+    avg_safety_score?: number
+    avg_transport_score?: number
+  } | null
+  error?: string
+}
+
+export interface ExplainApiResponse {
+  suburb: string
+  explanation: string
+  metrics?: SuburbApiResponse
+  budget?: number | null
+  within_budget?: boolean | null
 }
 
 export async function fetchRecommendations(params: {
@@ -228,6 +283,76 @@ export async function fetchAverages(): Promise<AveragesApiResponse> {
 
   const raw = await response.json()
   return normaliseAveragesResponse(raw)
+}
+
+export async function fetchCompareSuburbs(
+  suburbs: string[]
+): Promise<CompareApiResponse> {
+  const cleaned = suburbs
+    .map((name) => name.trim())
+    .filter((name) => name.length > 0)
+    .slice(0, 3)
+
+  const query = new URLSearchParams({
+    suburbs: cleaned.join(','),
+  })
+
+  const response = await fetch(`${API_BASE_URL}/api/v1/compare?${query.toString()}`)
+
+  if (!response.ok) {
+    throw new Error('Failed to compare suburbs')
+  }
+
+  const raw = await response.json()
+
+  return {
+    count: raw?.count ?? 0,
+    suburbs: Array.isArray(raw?.suburbs)
+      ? raw.suburbs.map(normaliseSuburbResponse)
+      : [],
+    melbourne_averages: raw?.melbourne_averages ?? undefined,
+  }
+}
+
+export async function fetchSimilarSuburbs(
+  suburbName: string,
+  n = 5
+): Promise<SimilarSuburbsApiResponse> {
+  const cleaned = suburbName.trim()
+
+  const response = await fetch(
+    `${API_BASE_URL}/api/v2/similar/${encodeURIComponent(cleaned)}?n=${n}`
+  )
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch similar suburbs for "${cleaned}"`)
+  }
+
+  return response.json()
+}
+
+export async function fetchSuburbExplanation(
+  suburbName: string,
+  budget?: number
+): Promise<ExplainApiResponse> {
+  const cleaned = suburbName.trim()
+  const query = new URLSearchParams()
+
+  if (budget !== undefined) {
+    query.set('budget', String(budget))
+  }
+
+  const suffix = query.toString() ? `?${query.toString()}` : ''
+
+  const response = await fetch(
+    `${API_BASE_URL}/api/v2/explain/${encodeURIComponent(cleaned)}${suffix}`
+  )
+
+  if (!response.ok) {
+    throw new Error(`Failed to fetch explanation for "${cleaned}"`)
+  }
+
+  return response.json()
 }
 
 export async function searchSuburbs(query: string): Promise<any> {

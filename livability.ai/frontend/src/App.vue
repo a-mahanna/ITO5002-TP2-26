@@ -35,7 +35,7 @@ function getLogo() {
               <RouterLink class="translate-middle" to="/FindYourMatch">Find your match</RouterLink>
             </div>
             <div>
-              <RouterLink class="translate-middle" to="/History">History</RouterLink>
+              <RouterLink class="translate-middle" to="/CompareSuburbs">Compare suburbs</RouterLink>
             </div>
           </nav>
         </div>

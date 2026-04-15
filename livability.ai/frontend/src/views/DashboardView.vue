@@ -1,19 +1,38 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from 'vue'
-import MapView from '../components/MapView.vue'
-import DashboardSideBar from '@/components/DashboardSideBar.vue'
-import MetricsBar from '@/components/MetricsBar.vue'
+import { onMounted, ref, watch, computed } from 'vue'
 import {
   fetchAverages,
   fetchSuburbByName,
+  fetchSimilarSuburbs,
   type AveragesApiResponse,
   type SuburbApiResponse,
+  type SimilarSuburbsApiResponse,
 } from '@/services/api'
-
+import MapView from '../components/MapView.vue'
+import DashboardSideBar from '@/components/DashboardSideBar.vue'
+import MetricsBar from '@/components/MetricsBar.vue'
 const props = defineProps<{
   selectedSuburb?: string | null
   setSelectedSuburb?: (name: string) => void
 }>()
+const similarResults = ref<SimilarSuburbsApiResponse | null>(null)
+const similarLoading = ref(false)
+const similarError = ref('')
+const showSimilarPanel = ref(false)
+
+const selectedSuburbName = computed(
+  () => suburbData.value?.name ?? suburbData.value?.suburb ?? ''
+)
+
+function formatCurrency(value: number | null | undefined) {
+  if (value === null || value === undefined) return '$—'
+  return `$${Number(value).toFixed(0)}`
+}
+
+function formatNumber(value: number | null | undefined, digits = 1) {
+  if (value === null || value === undefined) return '—'
+  return Number(value).toFixed(digits).replace(/\.0$/, '')
+}
 
 const selectedMetric = ref<'safety_score' | 'transport_score' | 'rent_score'>(
   'safety_score'
@@ -30,6 +49,24 @@ function handleMapClick(payload: { suburbName: string }) {
   props.setSelectedSuburb?.(payload.suburbName)
 }
 
+async function loadSimilarSuburbs() {
+  if (!selectedSuburbName.value) return
+
+  similarLoading.value = true
+  similarError.value = ''
+  showSimilarPanel.value = true
+
+  try {
+    similarResults.value = await fetchSimilarSuburbs(selectedSuburbName.value, 5)
+  } catch (err) {
+    similarError.value =
+      err instanceof Error ? err.message : 'Failed to fetch similar suburbs'
+    similarResults.value = null
+  } finally {
+    similarLoading.value = false
+  }
+}
+
 async function loadSuburbDetails(name: string) {
   loading.value = true
   error.value = ''
@@ -37,6 +74,11 @@ async function loadSuburbDetails(name: string) {
   try {
     const data = await fetchSuburbByName(name)
     suburbData.value = data
+
+    similarResults.value = null
+    similarError.value = ''
+    showSimilarPanel.value = false
+
     console.log('Loaded suburb data:', data)
   } catch (err) {
     suburbData.value = null
@@ -94,13 +136,90 @@ onMounted(() => {
         <DashboardSideBar :selectedSuburb="props.selectedSuburb" :setSelectedSuburb="props.setSelectedSuburb"
           :suburbData="suburbData" :averages="averages" :loading="loading" :error="error" />
       </div>
-    </div>
 
+    </div>
     <div class="row justify-content-center">
       <MetricsBar :selected-suburb="currentSelectedSuburb" :suburb-data="suburbData" :averages="averages"
         :loading="loading" :error="error" :selected-metric="selectedMetric" />
     </div>
   </div>
+
+  <div v-if="suburbData" class="row justify-content-center mt-3">
+  <div class="col-12 d-flex justify-content-center">
+    <button
+      class="btn btn-outline-dark"
+      @click="loadSimilarSuburbs"
+      :disabled="similarLoading || !selectedSuburbName"
+    >
+      {{ similarLoading ? 'Finding similar suburbs...' : 'Find Similar' }}
+    </button>
+  </div>
+</div>
+<section v-if="showSimilarPanel" class="row justify-content-center mt-4 mb-4">
+  <div class="col-12">
+    <div class="border rounded p-4">
+      <h3 class="mb-3">Similar suburbs to {{ selectedSuburbName }}</h3>
+
+      <p v-if="similarError" class="text-danger mb-0">
+        {{ similarError }}
+      </p>
+
+      <p v-else-if="similarLoading" class="mb-0">
+        Loading similar suburbs...
+      </p>
+
+      <p v-else-if="similarResults?.error" class="mb-0">
+        {{ similarResults.error }}
+      </p>
+
+      <div v-else-if="similarResults?.similar?.length" class="row g-3">
+        <div
+          v-for="(item, index) in similarResults.similar"
+          :key="`${item.suburb}-${index}`"
+          class="col-md-6 col-lg-4"
+        >
+          <div class="border rounded p-3 h-100">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <h5 class="mb-0">{{ item.suburb }}</h5>
+              <span class="badge text-bg-dark">#{{ index + 1 }}</span>
+            </div>
+
+            <p class="mb-2">
+              <strong>Similarity score:</strong>
+              {{ formatNumber(item.similarity_score, 3) }}
+            </p>
+
+            <p class="mb-2">
+              <strong>2 bed flat rent:</strong>
+              {{ formatCurrency(item.rent?.['2bed_flat']) }}
+            </p>
+
+            <p class="mb-2">
+              <strong>Total offences:</strong>
+              {{ formatNumber(item.crime?.total_offences, 0) }}
+            </p>
+
+            <p class="mb-1">
+              <strong>Transport score:</strong>
+              {{ formatNumber(item.scores?.transport_score) }}
+            </p>
+            <p class="mb-1">
+              Train: {{ formatNumber(item.transport?.train_stops, 0) }}
+            </p>
+            <p class="mb-1">
+              Tram: {{ formatNumber(item.transport?.tram_stops, 0) }}
+            </p>
+            <p class="mb-0">
+              Bus: {{ formatNumber(item.transport?.bus_stops, 0) }}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p v-else class="mb-0">No similar suburbs found.</p>
+    </div>
+  </div>
+</section>
 </template>
 
 <style scoped></style>

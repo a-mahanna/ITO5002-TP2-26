@@ -66,6 +66,10 @@ function buildFrontendExplanation(item: RecommendResult) {
   return parts.join(' ')
 }
 
+function explanationText(item: RecommendResult) {
+  return item.explanation?.trim() || buildFrontendExplanation(item)
+}
+
 const sortedRecommendations = computed(() => {
   const items = [...(results.value?.recommendations ?? [])]
 
@@ -119,12 +123,12 @@ async function runSearch() {
 </script>
 
 <template>
-  <div class="container py-4">
-    <div class="card border border-light-subtle shadow-sm mb-4">
+  <div class="find-suburb-page container py-4">
+    <div class="card border border-light-subtle shadow-sm mb-4 search-card">
       <div class="card-body">
         <h1 class="mb-3 text-center">Find Your Match</h1>
 
-        <p class="text-center text-muted mb-4">
+        <p class="text-center text-muted mb-4 intro-text">
           Select your property type, budget, and how much you care about safety and
           transport. We’ll rank matching suburbs for you.
         </p>
@@ -141,26 +145,57 @@ async function runSearch() {
 
           <div class="col-12 col-md-6">
             <label for="budget" class="form-label">Maximum Budget: ${{ budget }}/week</label>
-            <input id="budget" v-model="budget" type="range" class="form-range" min="200" max="2000" step="10" />
-            <input v-model="budget" type="number" class="form-control" min="200" max="2000" step="10" />
+            <input
+              id="budget"
+              v-model="budget"
+              type="range"
+              class="form-range"
+              min="200"
+              max="2000"
+              step="10"
+            />
+            <input
+              v-model="budget"
+              type="number"
+              class="form-control"
+              min="200"
+              max="2000"
+              step="10"
+            />
           </div>
 
           <div class="col-12 col-md-6">
             <label for="safetyWeight" class="form-label">
               Safety Importance: {{ Math.round(safetyWeight * 100) }}%
             </label>
-            <input id="safetyWeight" v-model="safetyWeight" type="range" class="form-range" min="0" max="1" step="0.1" />
+            <input
+              id="safetyWeight"
+              v-model="safetyWeight"
+              type="range"
+              class="form-range"
+              min="0"
+              max="1"
+              step="0.1"
+            />
           </div>
 
           <div class="col-12 col-md-6">
             <label for="transportWeight" class="form-label">
               Transport Importance: {{ Math.round(transportWeight * 100) }}%
             </label>
-            <input id="transportWeight" v-model="transportWeight" type="range" class="form-range" min="0" max="1" step="0.1" />
+            <input
+              id="transportWeight"
+              v-model="transportWeight"
+              type="range"
+              class="form-range"
+              min="0"
+              max="1"
+              step="0.1"
+            />
           </div>
 
-          <div class="col-12 d-grid d-md-flex justify-content-md-end">
-            <button class="btn btn-primary px-4" @click="runSearch" :disabled="loading">
+          <div class="text-center mt-4">
+            <button class="btn btn-dark px-4" @click="runSearch" :disabled="loading">
               {{ loading ? 'Searching...' : 'Find Matches' }}
             </button>
           </div>
@@ -179,9 +214,15 @@ async function runSearch() {
     <div v-if="sortedRecommendations.length" class="mb-3">
       <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
         <h3 class="mb-0">Recommended Suburbs</h3>
-        <small class="text-muted">
+        <small class="text-muted sort-note">
           Sorted by
-          {{ safetyWeight > transportWeight ? 'safety first' : transportWeight > safetyWeight ? 'transport first' : 'overall match score' }}
+          {{
+            safetyWeight > transportWeight
+              ? 'safety first'
+              : transportWeight > safetyWeight
+                ? 'transport first'
+                : 'overall match score'
+          }}
           with distance to CBD as a tie-breaker.
         </small>
       </div>
@@ -197,18 +238,35 @@ async function runSearch() {
 
               <p class="mb-2"><strong>Rent:</strong> {{ formatCurrency(item.rent) }}</p>
               <p class="mb-2"><strong>Safety Score:</strong> {{ formatValue(item.scores?.safety_score) }}</p>
-              <p class="mb-2"><strong>Transport Accessibility Score:</strong> {{ formatValue(transportAccessibilityScore(item)) }}</p>
-              <p class="mb-2"><strong>Distance to CBD:</strong> {{ item.distance_to_cbd_km ?? '—' }} km</p>
-
-              <p class="mb-0 text-muted">
-                {{ buildFrontendExplanation(item) }}
+              <p class="mb-2">
+                <strong>Transport Accessibility Score:</strong>
+                {{ formatValue(transportAccessibilityScore(item)) }}
               </p>
+              <p class="mb-2">
+                <strong>Distance to CBD:</strong>
+                {{ item.distance_to_cbd_km ?? '—' }} km
+              </p>
+
+              <div class="mt-3 p-3 rounded text-center">
+                <h6 class="mb-2">Why this suburb was recommended</h6>
+
+                <p class="small explanation-priority mb-2">
+                  Based on your current preferences:
+                  safety {{ Math.round(safetyWeight * 100) }}%,
+                  transport {{ Math.round(transportWeight * 100) }}%,
+                  budget ${{ budget }}/week.
+                </p>
+
+                <p class="mb-0 explanation-text">
+                  {{ explanationText(item) }}
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="card border border-light-subtle shadow-sm mt-4">
+      <div class="card border border-light-subtle shadow-sm mt-4 info-card">
         <div class="card-body small">
           <p class="mb-2">
             <strong>Rent:</strong> Median weekly rent by property type. Some suburbs may have missing rental data for some dwelling types.
@@ -224,3 +282,4 @@ async function runSearch() {
     </div>
   </div>
 </template>
+

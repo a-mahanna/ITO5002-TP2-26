@@ -2,11 +2,10 @@
   <div class="home-screen">
     <div class="container py-5">
       <div class="mx-auto content-wrap">
-        <h1 class="brand-title mb-3">Livability.ai</h1>
 
-        <h2 class="hero-title mb-3">Find your ideal Melbourne suburb</h2>
+        <h2 class="hero-title mb-3 text-center">Find your ideal Melbourne suburb</h2>
 
-        <p class="hero-text mb-5">
+        <p class="hero-text mb-3 text-center">
           Everyone deserves a home that is safe, affordable and well connected.
           Livability.ai brings together suburb data on rent, crime and public
           transport in one place, so Melbourne renters can find the suburb that
@@ -64,7 +63,7 @@
               </div>
             </RouterLink>
 
-            <RouterLink to="/Dashboard" class="explore-card text-decoration-none">
+            <RouterLink to="/CompareSuburbs" class="explore-card text-decoration-none">
               <div>
                 <h4 class="explore-title">Suburb comparison</h4>
                 <p class="explore-text mb-0">Compare suburbs side by side</p>
@@ -82,10 +81,6 @@
 </script>
 
 <style scoped>
-.home-screen {
-  min-height: 100vh;
-  background: #f5f5f5;
-}
 
 .content-wrap {
   max-width: 900px;
