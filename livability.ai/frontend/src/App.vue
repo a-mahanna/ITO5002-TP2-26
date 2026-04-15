@@ -1,37 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { RouterLink, RouterView, useRouter } from 'vue-router'
-import SearchBar from './components/SearchBar.vue'
+import { RouterLink, RouterView } from 'vue-router'
 
-const router = useRouter()
-
-const search = ref('')
 const selectedSuburb = ref('')
 
-function formatSuburbName(input: string) {
-  return input
-    .trim()
-    .replace(/\s+/g, ' ')
-    .toLowerCase()
-    .split(' ')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ')
-}
-
-function setSelectedSuburb(suburbName: string) {
-  const cleaned = formatSuburbName(suburbName)
-  if (!cleaned) return
-
-  search.value = cleaned
-  selectedSuburb.value = cleaned
-}
-
-async function runSearch(suburbName: string) {
-  setSelectedSuburb(suburbName)
-
-  if (router.currentRoute.value.path !== '/') {
-    await router.push('/')
-  }
+function setSelectedSuburb(name: string) {
+  selectedSuburb.value = name
 }
 
 function getLogo() {
@@ -45,36 +19,45 @@ function getLogo() {
 
 <template>
   <header>
-    <!--<div class="container">-->
-    <div class="row align-items-start livability-logo">
-      <img alt="livability logo" class="logo col-3 mx-auto" :src="getLogo()" width="125" height="125" />
+    <div class="container">
+      <div class="row align-items-start livability-logo">
+        <img alt="livability logo" class="logo col-6 mx-auto" :src="getLogo()" width="125" height="125" />
 
-      <div class="row col-6 my-auto mx-auto">
-        <nav class="d-flex justify-content-center">
-          <div>
-            <RouterLink class="translate-middle" to="/Dashboard">Dashboard</RouterLink>
-          </div>
-          <div>
-            <RouterLink class="translate-middle" to="/FindYourMatch">Find your match</RouterLink>
-          </div>
-          <div>
-            <RouterLink class="translate-middle" to="/History">History</RouterLink>
-          </div>
-          <div>
-            <RouterLink class="translate-middle" to="/about">About</RouterLink>
-          </div>
-
-        </nav>
-      </div>
-
-      <div class="col-2 my-auto mx-auto">
-        <SearchBar v-model="search" @search="runSearch" />
+        <div class="row col-6 my-auto mx-auto">
+          <nav class="d-flex justify-content-center">
+            <div>
+              <RouterLink class="translate-middle" to="/">Home</RouterLink>
+            </div>
+            <div>
+              <RouterLink class="translate-middle" to="/SuburbSearch">Suburb Search</RouterLink>
+            </div>
+            <div>
+              <RouterLink class="translate-middle" to="/FindYourMatch">Find your match</RouterLink>
+            </div>
+            <div>
+              <RouterLink class="translate-middle" to="/History">History</RouterLink>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
-    <!--</div>-->
   </header>
 
   <RouterView :selectedSuburb="selectedSuburb" :setSelectedSuburb="setSelectedSuburb" />
+
+  <footer class="container text-center py-4 mt-5">
+    <p class="mb-0">Median rent statistics sourced from Victoria Government Department of Families, Fairness and Housing
+      Rental Report, which is updated quarterly.
+      Crime statistics sourced from the Crime Statistics Agency latest Victorian crime data for offence count which is
+      updated quarterly, with population rate calculated based on suburb population data from Australian Bureau of
+      Statistics 2021 Census. Crime statistics should be used as a general indicator only and do not directly equate to
+      safety.
+      Public transport statistics are sourced from the Transport Victoria public transport lines and stops data, with
+      suburb boundaries provided by the Australian Bureau of Statistics Australian Statistical Geography Standard (ASGS)
+      Edition 3.
+    </p>
+    <p class="mb-0">&copy; 2026 Livability.ai. All rights reserved.</p>
+  </footer>
 </template>
 
 <style scoped>

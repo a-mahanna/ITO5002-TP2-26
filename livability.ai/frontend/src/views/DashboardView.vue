@@ -87,35 +87,18 @@ onMounted(() => {
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-9">
-        <MapView
-          :selected-suburb="currentSelectedSuburb"
-          :metric="selectedMetric"
-          @suburb-selected="handleMapClick"
-        />
+        <MapView :selected-suburb="currentSelectedSuburb" :metric="selectedMetric" @suburb-selected="handleMapClick" />
       </div>
 
       <div class="col-3">
-        <DashboardSideBar
-          :selected-suburb="currentSelectedSuburb"
-          :suburb-data="suburbData"
-          :averages="averages"
-          :loading="loading"
-          :error="error"
-          :selected-metric="selectedMetric"
-          @update-metric="selectedMetric = $event"
-        />
+        <DashboardSideBar :selectedSuburb="props.selectedSuburb" :setSelectedSuburb="props.setSelectedSuburb"
+          :suburbData="suburbData" :averages="averages" :loading="loading" :error="error" />
       </div>
     </div>
 
     <div class="row justify-content-center">
-      <MetricsBar
-        :selected-suburb="currentSelectedSuburb"
-        :suburb-data="suburbData"
-        :averages="averages"
-        :loading="loading"
-        :error="error"
-        :selected-metric="selectedMetric"
-      />
+      <MetricsBar :selected-suburb="currentSelectedSuburb" :suburb-data="suburbData" :averages="averages"
+        :loading="loading" :error="error" :selected-metric="selectedMetric" />
     </div>
   </div>
 </template>

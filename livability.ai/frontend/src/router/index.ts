@@ -1,18 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import DashboardView from '../views/DashboardView.vue'
+import HomeScreen from '@/views/HomeScreen.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/Dashboard',
-      name: 'Dashboard',
-      component: DashboardView,
+      path: '/',
+      name: 'Home',
+      component: HomeScreen,
     },
     {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue'),
+      path: '/SuburbSearch',
+      name: 'SuburbSearch',
+      component: DashboardView,
     },
     {
       path: '/FindYourMatch',

@@ -66,6 +66,26 @@ function transportAccessibilityScore() {
               <strong>Accessibility Score:</strong>
               {{ formatValue(transportAccessibilityScore()) }}
             </p>
+                      <p class="mb-2">
+            <strong>Bus Stops:</strong>
+            {{ formatValue(props.suburbData?.transport?.bus_stops) }}
+          </p>
+          <p class="mb-2">
+            <strong>Train Stops:</strong>
+            {{ formatValue(props.suburbData?.transport?.train_stops) }}
+          </p>
+          <p class="mb-2">
+            <strong>Tram Stops:</strong>
+            {{ formatValue(props.suburbData?.transport?.tram_stops) }}
+          </p>
+          <p class="mb-2">
+            <strong>Total Stops:</strong>
+            {{ formatValue(props.suburbData?.transport?.total_stops) }}
+          </p>
+          <p class="mb-0">
+            <strong>Weighted Score:</strong>
+            {{ formatValue(props.suburbData?.transport?.weighted_score) }}
+          </p>
             <p class="mb-0 text-muted small">
               This score reflects weighted public transport availability nearby. We are intentionally showing the accessibility score rather than raw stop counts.
             </p>

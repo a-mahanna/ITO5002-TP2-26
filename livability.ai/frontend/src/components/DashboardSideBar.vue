@@ -1,14 +1,27 @@
 <script setup lang="ts">
 import type { AveragesApiResponse, SuburbApiResponse } from '@/services/api'
+import SearchBar from './SearchBar.vue'
+import { ref, watch } from 'vue'
+
+const search = ref('')
 
 const props = defineProps<{
   selectedSuburb?: string | null
+  setSelectedSuburb?: (name: string) => void
   suburbData?: SuburbApiResponse | null
   averages?: AveragesApiResponse | null
   loading?: boolean
   error?: string
   selectedMetric?: 'safety_score' | 'transport_score' | 'rent_score'
 }>()
+
+watch(
+  () => props.selectedSuburb,
+  (newValue) => {
+    search.value = newValue ?? ''
+  },
+  { immediate: true }
+)
 
 function displayName() {
   return (
@@ -19,8 +32,32 @@ function displayName() {
   )
 }
 
+function formatSuburbName(input: string) {
+  return input
+    .trim()
+    .replace(/\s+/g, ' ')
+    .toLowerCase()
+    .split(' ')
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(' ')
+}
+
+function runSearch(suburbName: string) {
+  const cleaned = formatSuburbName(suburbName)
+  if (!cleaned) return
+
+  search.value = cleaned
+  props.setSelectedSuburb?.(cleaned)
+}
+
 function getTransportAccessibilityScore(data?: SuburbApiResponse | null) {
-  return data?.transport_score ?? data?.scores?.transport_score ?? data?.pt_score ?? data?.transport?.weighted_score ?? null
+  return (
+    data?.transport_score ??
+    data?.scores?.transport_score ??
+    data?.pt_score ??
+    data?.transport?.weighted_score ??
+    null
+  )
 }
 
 function getTransportAverage(avg?: AveragesApiResponse | null) {
@@ -60,12 +97,18 @@ function formatCurrency(value: number | null | undefined) {
 </script>
 
 <template>
-  <div class="container mt-5">
-    <label for="suburbname" class="form-label">Selected Suburb</label>
+
+
+  <div class="container mt-3">
+    <!--<label for="suburbname" class="form-label">Selected Suburb</label>
     <div class="card mb-3" id="suburbname">
       <div class="card-body">
         <h5 class="card-title mb-0">{{ displayName() }}</h5>
       </div>
+    </div>-->
+    <label for="suburbname" class="form-label">Selected Suburb</label>
+    <div class="card mb-3">
+      <SearchBar v-model="search" @search="runSearch" />
     </div>
 
     <label for="overview" class="form-label">Overview</label>
@@ -110,74 +153,13 @@ function formatCurrency(value: number | null | undefined) {
         <p class="mb-0">
           <strong>Transport Accessibility:</strong>
           <span>
-            {{ getDeviationText(getTransportAccessibilityScore(props.suburbData), getTransportAverage(props.averages)) }}
+            {{ getDeviationText(
+              getTransportAccessibilityScore(props.suburbData),
+              getTransportAverage(props.averages)
+            ) }}
           </span>
         </p>
       </div>
     </div>
-
-    <!--<label for="aboutdata" class="form-label">About this data</label>
-    <div class="card mb-3" id="aboutdata">
-      <div class="card-body small">
-        <p class="mb-2">
-          <strong>Rent:</strong>
-          Median weekly rent by property type. Some suburbs have limited rental listings and may be missing data for certain property types.
-        </p>
-        <p class="mb-2">
-          <strong>Safety:</strong>
-          Total recorded criminal offences for the suburb. Raw offence counts are best used as a general indicator only.
-        </p>
-        <p class="mb-0">
-          <strong>Transport:</strong>
-          Transport accessibility score based on weighted public transport availability. Higher means more nearby transport options.
-        </p>
-      </div>
-    </div> -->
   </div>
 </template>
-
-<style scoped>
-.sidebar-wrapper {
-  width: 100%;
-}
-
-.sidebar-inner {
-  width: 100%;
-}
-
-.sidebar-card {
-  width: 100%;
-  border-radius: 12px;
-}
-
-.card-body p {
-  word-break: break-word;
-}
-
-@media (min-width: 992px) {
-  .sidebar-inner {
-    position: sticky;
-    top: 1rem;
-  }
-}
-
-@media (max-width: 991.98px) {
-  .sidebar-inner {
-    position: static;
-  }
-}
-
-@media (max-width: 576px) {
-  .sidebar-card .card-body {
-    padding: 0.9rem;
-  }
-
-  .card-title {
-    font-size: 1.1rem;
-  }
-
-  .form-label {
-    margin-bottom: 0.4rem;
-  }
-}
-</style>

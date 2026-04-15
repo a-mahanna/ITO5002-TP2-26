@@ -68,7 +68,7 @@ watch(model, (value) => {
       v-model="model"
       type="text"
       class="form-control"
-      placeholder="Search suburb"
+      placeholder="Search Suburb"
       @keyup.enter="chooseSuggestion(model)"
     />
 
