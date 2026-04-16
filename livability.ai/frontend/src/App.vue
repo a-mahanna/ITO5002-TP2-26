@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+import logoLight from '@/assets/logo.svg'
+import logoDark from '@/assets/logo-dark.svg'
 
 const selectedSuburb = ref('')
 
@@ -9,11 +11,9 @@ function setSelectedSuburb(name: string) {
 }
 
 function getLogo() {
-  if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    return "src/assets/logo-dark.svg"
-  } else {
-    return "src/assets/logo.svg"
-  }
+  return window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? logoDark
+    : logoLight
 }
 </script>
 
