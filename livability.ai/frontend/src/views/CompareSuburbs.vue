@@ -141,13 +141,17 @@ async function compareSuburbs() {
   }
 }
 
+function suburbKey(suburb: any, index: number) {
+  return suburb.name ?? suburb.suburb ?? `suburb-${index}`
+}
+
 const displayedSuburbs = computed(() => results.value?.suburbs ?? [])
 </script>
 
 <template>
   <div class="container py-4">
-      <section class="card border border-light-subtle shadow-sm mb-4 search-card">
-        <div class="card-body">
+    <section class="card border border-light-subtle shadow-sm mb-4 search-card">
+      <div class="card-body">
         <h1 class="text-center mb-4">Compare Suburbs</h1>
         <p class="text-center compare-subtitle mb-5">
           Enter up to 3 suburbs below to compare
@@ -201,89 +205,89 @@ const displayedSuburbs = computed(() => results.value?.suburbs ?? [])
         </div>
       </div>
 
-        <div class="text-center mt-4">
-          <button class="btn btn-dark px-4" @click="compareSuburbs" :disabled="loading">
-            {{ loading ? 'Comparing...' : 'Compare suburbs' }}
-          </button>
-        </div>
+      <div class="text-center mt-4">
+        <button class="btn btn-dark px-4" @click="compareSuburbs" :disabled="loading">
+          {{ loading ? 'Comparing...' : 'Compare suburbs' }}
+        </button>
+      </div>
 
-        <p v-if="error" class="text-danger mt-3 mb-0 text-center">
-          {{ error }}
-        </p>
-      </section>
+      <p v-if="error" class="text-danger mt-3 mb-0 text-center">
+        {{ error }}
+      </p>
+    </section>
 
-      <section v-if="displayedSuburbs.length" class="mb-4">
-        <div class="row g-4">
-          <div v-for="suburb in displayedSuburbs" :key="suburb.name" class="col-lg-4 col-md-6">
-            <div class="card h-100 shadow-sm border border-light-subtle p-4">
-              <h2 class="suburb-name mb-4">
-                {{ suburb.name ?? suburb.suburb ?? 'Unknown suburb' }}
-              </h2>
+    <section v-if="displayedSuburbs.length" class="mb-4">
+      <div class="row g-4">
+        <div v-for="(suburb, index) in displayedSuburbs" :key="suburbKey(suburb, index)" class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow-sm border border-light-subtle p-4">
+            <h2 class="suburb-name mb-4">
+              {{ suburb.name ?? suburb.suburb ?? 'Unknown suburb' }}
+            </h2>
 
-              <div class="metric-line mb-3">
-                <strong>Distance to CBD:</strong>
-                {{ formatDistance(suburb.distance_to_cbd_km) }}
-              </div>
+            <div class="metric-line mb-3">
+              <strong>Distance to CBD:</strong>
+              {{ formatDistance(suburb.distance_to_cbd_km) }}
+            </div>
 
-              <div class="mb-4">
-                <h3 class="section-heading">Rent Breakdown (Median per week):</h3>
-                <table class="table table-bordered rent-table mb-0">
-                  <tbody>
-                    <tr>
-                      <td>1 bed flat: {{ formatCurrency(suburb.rent?.['1bed_flat']) }}</td>
-                      <td>2 bed flat: {{ formatCurrency(suburb.rent?.['2bed_flat']) }}</td>
-                    </tr>
-                    <tr>
-                      <td>3 bed flat: {{ formatCurrency(suburb.rent?.['3bed_flat']) }}</td>
-                      <td>2 bed house: {{ formatCurrency(suburb.rent?.['2bed_house']) }}</td>
-                    </tr>
-                    <tr>
-                      <td>3 bed house: {{ formatCurrency(suburb.rent?.['3bed_house']) }}</td>
-                      <td>4 bed house: {{ formatCurrency(suburb.rent?.['4bed_house']) }}</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+            <div class="mb-4">
+              <h3 class="section-heading">Rent Breakdown (Median per week):</h3>
+              <table class="table table-bordered rent-table mb-0">
+                <tbody>
+                  <tr>
+                    <td>1 bed flat: {{ formatCurrency(suburb.rent?.['1bed_flat']) }}</td>
+                    <td>2 bed flat: {{ formatCurrency(suburb.rent?.['2bed_flat']) }}</td>
+                  </tr>
+                  <tr>
+                    <td>3 bed flat: {{ formatCurrency(suburb.rent?.['3bed_flat']) }}</td>
+                    <td>2 bed house: {{ formatCurrency(suburb.rent?.['2bed_house']) }}</td>
+                  </tr>
+                  <tr>
+                    <td>3 bed house: {{ formatCurrency(suburb.rent?.['3bed_house']) }}</td>
+                    <td>4 bed house: {{ formatCurrency(suburb.rent?.['4bed_house']) }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-              <div class="mb-4">
-                <h3 class="section-heading">Crime</h3>
-                <p class="mb-1">
-                  Crime score:
-                  {{ formatNumber(crimeRatePer1000(suburb)) }}
-                </p>
-                <p class="mb-0">
-                  Crime rate (per 1,000):
-                  {{ formatNumber(suburb.crime?.offence_rate_1000, 0) }}
-                </p>
-              </div>
+            <div class="mb-4">
+              <h3 class="section-heading">Crime</h3>
+              <p class="mb-1">
+                Crime score:
+                {{ formatNumber(crimeRatePer1000(suburb)) }}
+              </p>
+              <p class="mb-0">
+                Crime rate (per 1,000):
+                {{ formatNumber(suburb.crime?.offence_rate_1000, 0) }}
+              </p>
+            </div>
 
-              <div>
-                <h3 class="section-heading">Public Transport Accessibility</h3>
-                <p class="mb-1">
-                  Train stations:
-                  {{ formatNumber(suburb.transport?.train_stops, 0) }}
-                </p>
-                <p class="mb-1">
-                  Tram stops:
-                  {{ formatNumber(suburb.transport?.tram_stops, 0) }}
-                </p>
-                <p class="mb-1">
-                  Bus stops:
-                  {{ formatNumber(suburb.transport?.bus_stops, 0) }}
-                </p>
-                <p class="mb-0">
-                  Transport accessibility score:
-                  {{ formatNumber(transportAccessibilityScore(suburb)) }}
-                </p>
-              </div>
+            <div>
+              <h3 class="section-heading">Public Transport Accessibility</h3>
+              <p class="mb-1">
+                Train stations:
+                {{ formatNumber(suburb.transport?.train_stops, 0) }}
+              </p>
+              <p class="mb-1">
+                Tram stops:
+                {{ formatNumber(suburb.transport?.tram_stops, 0) }}
+              </p>
+              <p class="mb-1">
+                Bus stops:
+                {{ formatNumber(suburb.transport?.bus_stops, 0) }}
+              </p>
+              <p class="mb-0">
+                Transport accessibility score:
+                {{ formatNumber(transportAccessibilityScore(suburb)) }}
+              </p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section v-else-if="hasSearched && !loading && !error" class="border p-4 text-center">
-        No matching suburbs were returned. Check the suburb spelling and try again.
-      </section>
+    <section v-else-if="hasSearched && !loading && !error" class="border p-4 text-center">
+      No matching suburbs were returned. Check the suburb spelling and try again.
+    </section>
   </div>
 </template>
 
