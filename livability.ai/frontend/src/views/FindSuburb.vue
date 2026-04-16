@@ -1,6 +1,12 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue'
-import { fetchRecommendations, type RecommendApiResponse, type RecommendResult } from '@/services/api'
+import { computed, ref, onMounted } from 'vue'
+import {
+  fetchRecommendations,
+  fetchAverages,
+  type RecommendApiResponse,
+  type RecommendResult,
+  type AveragesApiResponse,
+} from '@/services/api'
 
 const propertyType = ref('2bed_flat')
 const budget = ref(700)
@@ -9,6 +15,7 @@ const transportWeight = ref(0.5)
 const results = ref<RecommendApiResponse | null>(null)
 const loading = ref(false)
 const error = ref('')
+const averages = ref<AveragesApiResponse | null>(null)
 
 const propertyOptions = [
   { label: '1 bed flat', value: '1bed_flat' },
@@ -18,6 +25,49 @@ const propertyOptions = [
   { label: '3 bed house', value: '3bed_house' },
   { label: '4 bed house', value: '4bed_house' },
 ]
+
+async function loadAverages() {
+  try {
+    averages.value = await fetchAverages()
+    console.log('Loaded averages:', averages.value)
+  } catch (err) {
+    console.error('Failed to load averages:', err)
+  }
+}
+
+onMounted(() => {
+  loadAverages()
+})
+
+function offenceRate(item: RecommendResult) {
+  return item.crime?.offence_rate_1000 ?? null
+}
+
+function offenceRateDifferencePercent(item: RecommendResult) {
+  const rate = offenceRate(item)
+  const avg = averages.value?.crime_rate
+
+  if (rate == null || avg == null || avg === 0) return null
+
+  return ((rate - avg) / avg) * 100
+}
+
+function formatCrimeRateComparison(item: RecommendResult) {
+  const rate = offenceRate(item)
+  const diff = offenceRateDifferencePercent(item)
+
+  if (rate == null) return '—'
+
+  const rateText = `${formatValue(rate, 1)} offences per 1,000`
+
+  if (diff == null) return rateText
+
+  const rounded = Math.abs(diff).toFixed(0)
+
+  if (diff > 0) return `${rateText} (${rounded}% above average)`
+  if (diff < 0) return `${rateText} (${rounded}% below average)`
+  return `${rateText} (at average)`
+}
 
 function formatCurrency(value: number | null | undefined) {
   if (value === null || value === undefined) return 'Rental data not available for this suburb'
@@ -145,53 +195,24 @@ async function runSearch() {
 
           <div class="col-12 col-md-6">
             <label for="budget" class="form-label">Maximum Budget: ${{ budget }}/week</label>
-            <input
-              id="budget"
-              v-model="budget"
-              type="range"
-              class="form-range"
-              min="200"
-              max="2000"
-              step="10"
-            />
-            <input
-              v-model="budget"
-              type="number"
-              class="form-control"
-              min="200"
-              max="2000"
-              step="10"
-            />
+            <input id="budget" v-model="budget" type="range" class="form-range" min="200" max="2000" step="10" />
+            <input v-model="budget" type="number" class="form-control" min="200" max="2000" step="10" />
           </div>
 
           <div class="col-12 col-md-6">
             <label for="safetyWeight" class="form-label">
-              Safety Importance: {{ Math.round(safetyWeight * 100) }}%
+              Crime Rate: {{ Math.round(safetyWeight * 100) }}%
             </label>
-            <input
-              id="safetyWeight"
-              v-model="safetyWeight"
-              type="range"
-              class="form-range"
-              min="0"
-              max="1"
-              step="0.1"
-            />
+            <input id="safetyWeight" v-model="safetyWeight" type="range" class="form-range" min="0" max="1"
+              step="0.1" />
           </div>
 
           <div class="col-12 col-md-6">
             <label for="transportWeight" class="form-label">
               Transport Importance: {{ Math.round(transportWeight * 100) }}%
             </label>
-            <input
-              id="transportWeight"
-              v-model="transportWeight"
-              type="range"
-              class="form-range"
-              min="0"
-              max="1"
-              step="0.1"
-            />
+            <input id="transportWeight" v-model="transportWeight" type="range" class="form-range" min="0" max="1"
+              step="0.1" />
           </div>
 
           <div class="text-center mt-4">
@@ -237,7 +258,15 @@ async function runSearch() {
               </div>
 
               <p class="mb-2"><strong>Rent:</strong> {{ formatCurrency(item.rent) }}</p>
-              <p class="mb-2"><strong>Safety Score:</strong> {{ formatValue(item.scores?.safety_score) }}</p>
+              <p class="mb-2">
+                <strong>Crime Rate:</strong>
+                <span :class="{
+                  '': offenceRateDifferencePercent(item) !== null && offenceRateDifferencePercent(item)! > 0,
+                  '': offenceRateDifferencePercent(item) !== null && offenceRateDifferencePercent(item)! < 0
+                }">
+                  {{ formatCrimeRateComparison(item) }}
+                </span>
+              </p>
               <p class="mb-2">
                 <strong>Transport Accessibility Score:</strong>
                 {{ formatValue(transportAccessibilityScore(item)) }}
@@ -269,17 +298,19 @@ async function runSearch() {
       <div class="card border border-light-subtle shadow-sm mt-4 info-card">
         <div class="card-body small">
           <p class="mb-2">
-            <strong>Rent:</strong> Median weekly rent by property type. Some suburbs may have missing rental data for some dwelling types.
+            <strong>Rent:</strong> Median weekly rent by property type. Some suburbs may have missing rental data for
+            some dwelling types.
           </p>
           <p class="mb-2">
-            <strong>Safety:</strong> Uses suburb safety scores derived from recorded offences and should be treated as a general indicator.
+            <strong>Safety:</strong> Uses suburb safety scores derived from recorded offences and should be treated as a
+            general indicator.
           </p>
           <p class="mb-0">
-            <strong>Transport:</strong> We display a transport accessibility score rather than raw stop counts so the interface is easier to interpret.
+            <strong>Transport:</strong> We display a transport accessibility score rather than raw stop counts so the
+            interface is easier to interpret.
           </p>
         </div>
       </div>
     </div>
   </div>
 </template>
-

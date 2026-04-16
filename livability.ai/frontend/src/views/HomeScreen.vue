@@ -2,43 +2,49 @@
   <div class="home-screen">
     <div class="container py-5">
       <div class="mx-auto content-wrap">
+        <section class="hero-section text-center mb-5">
+          <div class="hero-badge mb-3">Livability.AI</div>
 
-        <h2 class="hero-title mb-3 text-center">Find your ideal Melbourne suburb</h2>
+          <h1 class="hero-title mb-3">Find your ideal Melbourne suburb</h1>
 
-        <p class="hero-text mb-3 text-center">
-          Everyone deserves a home that is safe, affordable and well connected.
-          Livability.ai brings together suburb data on rent, crime and public
-          transport in one place, so Melbourne renters can find the suburb that
-          works for them.
-        </p>
+          <p class="hero-text mx-auto mb-0">
+            Everyone deserves a home that is safe, affordable, and well connected.
+            Livability.ai brings together suburb data on rent, crime, and public
+            transport in one place, so Melbourne renters can discover suburbs that
+            truly match their needs.
+          </p>
+        </section>
 
         <section class="mb-5">
-          <h3 class="section-title mb-4">What we measure</h3>
+          <h3 class="section-title text-center mb-4">What we measure</h3>
 
           <div class="row g-4">
             <div class="col-md-4">
-              <div class="info-card h-100">
+              <div class="info-card h-100 text-center">
+                <div class="icon-wrap mb-3">💰</div>
                 <h4 class="card-title">Rent</h4>
                 <p class="card-text mb-0">
-                  Median rent per suburb by property type and number of bedrooms
+                  Median rent by suburb, property type, and number of bedrooms.
                 </p>
               </div>
             </div>
 
             <div class="col-md-4">
-              <div class="info-card h-100">
+              <div class="info-card h-100 text-center">
+                <div class="icon-wrap mb-3">🛡️</div>
                 <h4 class="card-title">Crime</h4>
                 <p class="card-text mb-0">
-                  Crime offence rate per suburb
+                  Crime offence rate per 1,000 people to help compare suburb safety.
                 </p>
               </div>
             </div>
 
             <div class="col-md-4">
-              <div class="info-card h-100">
-                <h4 class="card-title">Public transport</h4>
+              <div class="info-card h-100 text-center">
+                <div class="icon-wrap mb-3">🚉</div>
+                <h4 class="card-title">Public Transport</h4>
                 <p class="card-text mb-0">
-                  Public transport stops per suburb by transport type and accessibility score
+                  Transport stops by type plus an accessibility score for convenience.
                 </p>
               </div>
             </div>
@@ -46,29 +52,38 @@
         </section>
 
         <section>
-          <h3 class="section-title mb-4">Ways to explore</h3>
+          <h3 class="section-title text-center mb-4">Ways to explore</h3>
 
-          <div class="d-grid gap-3">
-            <RouterLink to="/SuburbSearch" class="explore-card text-decoration-none">
-              <div>
-                <h4 class="explore-title">Suburb search</h4>
-                <p class="explore-text mb-0">Search characteristics by suburb</p>
-              </div>
-            </RouterLink>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <RouterLink to="/SuburbSearch" class="explore-card text-decoration-none h-100">
+                <div class="explore-icon mb-3">🔍</div>
+                <h4 class="explore-title">Suburb Search</h4>
+                <p class="explore-text mb-0">
+                  Search for a suburb and view its rent, crime, and transport profile.
+                </p>
+              </RouterLink>
+            </div>
 
-            <RouterLink to="/FindYourMatch" class="explore-card text-decoration-none">
-              <div>
-                <h4 class="explore-title">Find your match</h4>
-                <p class="explore-text mb-0">Find suburbs that match your preferences</p>
-              </div>
-            </RouterLink>
+            <div class="col-md-4">
+              <RouterLink to="/FindYourMatch" class="explore-card text-decoration-none h-100">
+                <div class="explore-icon mb-3">✨</div>
+                <h4 class="explore-title">Find Your Match</h4>
+                <p class="explore-text mb-0">
+                  Get suburb recommendations based on your budget and priorities.
+                </p>
+              </RouterLink>
+            </div>
 
-            <RouterLink to="/CompareSuburbs" class="explore-card text-decoration-none">
-              <div>
-                <h4 class="explore-title">Suburb comparison</h4>
-                <p class="explore-text mb-0">Compare suburbs side by side</p>
-              </div>
-            </RouterLink>
+            <div class="col-md-4">
+              <RouterLink to="/CompareSuburbs" class="explore-card text-decoration-none h-100">
+                <div class="explore-icon mb-3">📊</div>
+                <h4 class="explore-title">Suburb Comparison</h4>
+                <p class="explore-text mb-0">
+                  Compare suburbs side by side to see which one suits you best.
+                </p>
+              </RouterLink>
+            </div>
           </div>
         </section>
       </div>
@@ -81,93 +96,162 @@
 </script>
 
 <style scoped>
-
-.content-wrap {
-  max-width: 900px;
+.home-screen {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
 }
 
-.brand-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #111;
+.content-wrap {
+  max-width: 980px;
+}
+
+.hero-section {
+  padding: 2rem 1rem 1rem;
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background: #111827;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 
 .hero-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #111;
+  font-size: 2.3rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1.2;
 }
 
 .hero-text {
-  max-width: 760px;
-  font-size: 1.05rem;
-  line-height: 1.7;
-  color: #333;
+  max-width: 720px;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #374151;
 }
 
 .section-title {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  color: #111;
+  color: #111827;
 }
 
-.info-card {
-  background: white;
-  border: 1px solid #222;
-  padding: 1.5rem;
-  min-height: 180px;
+.info-card,
+.explore-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #d1d5db;
+  border-radius: 18px;
+  padding: 1.75rem 1.5rem;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
-.card-title {
-  font-size: 1.3rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  color: #111;
+.info-card:hover,
+.explore-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.1);
+  border-color: #9ca3af;
 }
 
-.card-text {
+.icon-wrap,
+.explore-icon {
+  width: 58px;
+  height: 58px;
+  margin: 0 auto;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 1.7rem;
+  background: #f3f4f6;
+}
+
+.card-title,
+.explore-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #111827;
+}
+
+.card-text,
+.explore-text {
   font-size: 1rem;
   line-height: 1.7;
-  color: #333;
+  color: #4b5563;
 }
 
 .explore-card {
   display: block;
-  background: white;
-  border: 1px solid #222;
-  padding: 1.5rem;
-  transition: all 0.2s ease;
+  height: 100%;
+  text-align: center;
 }
 
-.explore-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-}
+@media (prefers-color-scheme: dark) {
+  .home-screen {
+    background: linear-gradient(180deg, #0f172a 0%, #111827 100%);
+  }
 
-.explore-title {
-  font-size: 1.35rem;
-  font-weight: 400;
-  margin-bottom: 1rem;
-  color: #111;
-}
-
-.explore-text {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-@media (max-width: 768px) {
-  .brand-title {
-    font-size: 1.8rem;
+  .hero-badge {
+    background: #e5e7eb;
+    color: #111827;
   }
 
   .hero-title {
-    font-size: 1.25rem;
+    color: #f8fafc;
   }
 
-  .info-card {
-    min-height: auto;
+  .hero-text {
+    color: #cbd5e1;
+  }
+
+  .section-title {
+    color: #f8fafc;
+  }
+
+  .info-card,
+  .explore-card {
+    background: rgba(30, 41, 59, 0.9);
+    border: 1px solid #334155;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+  }
+
+  .info-card:hover,
+  .explore-card:hover {
+    border-color: #64748b;
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.3);
+  }
+
+  .icon-wrap,
+  .explore-icon {
+    background: #334155;
+  }
+
+  .card-title,
+  .explore-title {
+    color: #f8fafc;
+  }
+
+  .card-text,
+  .explore-text {
+    color: #cbd5e1;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.35rem;
   }
 }
 </style>

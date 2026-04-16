@@ -152,8 +152,8 @@ const displayedSuburbs = computed(() => results.value?.suburbs ?? [])
   <div class="container py-4">
     <section class="card border border-light-subtle shadow-sm mb-4 search-card">
       <div class="card-body">
-        <h1 class="text-center mb-4">Compare Suburbs</h1>
-        <p class="text-center compare-subtitle mb-5">
+        <h1 class="text-center mb-3">Compare Suburbs</h1>
+        <p class="text-center text-muted mb-4 intro-text">
           Enter up to 3 suburbs below to compare
         </p>
 
@@ -201,15 +201,17 @@ const displayedSuburbs = computed(() => results.value?.suburbs ?? [])
                 </li>
               </ul>
             </div>
+
+          </div>
+          <div class="text-center mt-4">
+            <button class="btn btn-dark px-4" @click="compareSuburbs" :disabled="loading">
+              {{ loading ? 'Comparing...' : 'Compare suburbs' }}
+            </button>
           </div>
         </div>
       </div>
 
-      <div class="text-center mt-4">
-        <button class="btn btn-dark px-4" @click="compareSuburbs" :disabled="loading">
-          {{ loading ? 'Comparing...' : 'Compare suburbs' }}
-        </button>
-      </div>
+
 
       <p v-if="error" class="text-danger mt-3 mb-0 text-center">
         {{ error }}
@@ -223,6 +225,11 @@ const displayedSuburbs = computed(() => results.value?.suburbs ?? [])
             <h2 class="suburb-name mb-4">
               {{ suburb.name ?? suburb.suburb ?? 'Unknown suburb' }}
             </h2>
+
+            <div class="metric-line mb-3">
+              <strong>Population:</strong>
+              {{ (suburb.crime?.population) }}
+            </div>
 
             <div class="metric-line mb-3">
               <strong>Distance to CBD:</strong>

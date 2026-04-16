@@ -241,7 +241,11 @@ function normaliseAveragesResponse(raw: any): AveragesApiResponse {
       avg?.transport_score ??
       avg?.weighted_transport_score ??
       null,
-    crime_rate: avg?.crime_rate ?? avg?.offence_rate_1000 ?? null,
+    crime_rate:
+  avg?.offence_rate_1000 ??
+  avg?.crime_rate ??
+  avg?.total_offences ??
+  null,
     pt_score: avg?.pt_score ?? avg?.weighted_transport_score ?? null,
   }
 }

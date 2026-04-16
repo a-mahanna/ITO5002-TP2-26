@@ -23,15 +23,6 @@ watch(
   { immediate: true }
 )
 
-function displayName() {
-  return (
-    props.suburbData?.name ||
-    props.suburbData?.suburb ||
-    props.selectedSuburb ||
-    'No suburb selected'
-  )
-}
-
 function formatSuburbName(input: string) {
   return input
     .trim()
@@ -114,6 +105,10 @@ function formatCurrency(value: number | null | undefined) {
     <label for="overview" class="form-label">Overview</label>
     <div class="card mb-3" id="overview">
       <div class="card-body">
+        <p class="mb-2">
+          <strong>Population:</strong>
+          {{ formatValue(props.suburbData?.crime?.population) }}
+        </p>
         <p class="mb-2">
           <strong>Distance to CBD:</strong>
           {{ formatValue(props.suburbData?.distance_to_cbd_km, ' km') }}

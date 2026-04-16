@@ -147,7 +147,7 @@ onMounted(() => {
   <div v-if="suburbData" class="row justify-content-center mt-3">
   <div class="col-12 d-flex justify-content-center">
     <button
-      class="btn btn-outline-dark"
+      class="btn btn-dark px-4"
       @click="loadSimilarSuburbs"
       :disabled="similarLoading || !selectedSuburbName"
     >
@@ -157,7 +157,7 @@ onMounted(() => {
 </div>
 <section v-if="showSimilarPanel" class="row justify-content-center mt-4 mb-4">
   <div class="col-12">
-    <div class="border rounded p-4">
+    <div class="border border-light-subtle rounded p-4">
       <h3 class="mb-3">Similar suburbs to {{ selectedSuburbName }}</h3>
 
       <p v-if="similarError" class="text-danger mb-0">
@@ -178,7 +178,7 @@ onMounted(() => {
           :key="`${item.suburb}-${index}`"
           class="col-md-6 col-lg-4"
         >
-          <div class="border rounded p-3 h-100">
+          <div class="border border-light-subtle p-3 h-100">
             <div class="d-flex justify-content-between align-items-start mb-2">
               <h5 class="mb-0">{{ item.suburb }}</h5>
               <span class="badge text-bg-dark">#{{ index + 1 }}</span>
@@ -186,7 +186,7 @@ onMounted(() => {
 
             <p class="mb-2">
               <strong>Similarity score:</strong>
-              {{ formatNumber(item.similarity_score, 3) }}
+              {{ formatNumber(item.similarity_score *100, 1) }}%
             </p>
 
             <p class="mb-2">
