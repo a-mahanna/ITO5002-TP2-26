@@ -12,10 +12,10 @@
     "tram_stops": 0.6,
     "total_stops": 8.3,
     "weighted_transport_score": 11.2,
-    "offence_rate_1000": 115.9
+    "offence_rate_1000": 94.1
   },
   "suburb_count": 536,
-  "generated": "2026-04-15T18:03:43.437020",
+  "generated": "2026-04-17T16:08:01.006692",
   "suburbs": [
     {
       "name": "Abbotsford",
@@ -45,7 +45,7 @@
       },
       "scores": {
         "rent_score": 17.1,
-        "safety_score": 98.5,
+        "safety_score": 91.8,
         "transport_score": 8.1
       }
     },
@@ -77,7 +77,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.2,
+        "safety_score": 90.1,
         "transport_score": 2.7
       }
     },
@@ -109,7 +109,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.0,
+        "safety_score": 94.8,
         "transport_score": 2.7
       }
     },
@@ -141,7 +141,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 91.7,
         "transport_score": 12.8
       }
     },
@@ -173,7 +173,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.1,
+        "safety_score": 89.9,
         "transport_score": 3.2
       }
     },
@@ -205,7 +205,7 @@
       },
       "scores": {
         "rent_score": 30.2,
-        "safety_score": 98.2,
+        "safety_score": 90.4,
         "transport_score": 15.5
       }
     },
@@ -237,7 +237,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.4,
+        "safety_score": 85.9,
         "transport_score": 4.0
       }
     },
@@ -269,7 +269,7 @@
       },
       "scores": {
         "rent_score": 47.2,
-        "safety_score": 97.5,
+        "safety_score": 86.8,
         "transport_score": 5.2
       }
     },
@@ -301,7 +301,7 @@
       },
       "scores": {
         "rent_score": 72.4,
-        "safety_score": 98.8,
+        "safety_score": 93.4,
         "transport_score": 11.7
       }
     },
@@ -333,7 +333,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.3,
+        "safety_score": 96.1,
         "transport_score": 6.3
       }
     },
@@ -365,7 +365,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 94.3,
         "transport_score": 14.7
       }
     },
@@ -397,7 +397,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.7,
+        "safety_score": 82.5,
         "transport_score": 1.8
       }
     },
@@ -429,7 +429,7 @@
       },
       "scores": {
         "rent_score": 28.4,
-        "safety_score": 98.8,
+        "safety_score": 93.7,
         "transport_score": 28.7
       }
     },
@@ -461,7 +461,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.8,
+        "safety_score": 77.2,
         "transport_score": 0.0
       }
     },
@@ -493,7 +493,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 91.5,
+        "safety_score": 54.2,
         "transport_score": 0.0
       }
     },
@@ -525,7 +525,7 @@
       },
       "scores": {
         "rent_score": 53.5,
-        "safety_score": 99.1,
+        "safety_score": 95.0,
         "transport_score": 22.5
       }
     },
@@ -557,7 +557,7 @@
       },
       "scores": {
         "rent_score": 48.5,
-        "safety_score": 98.6,
+        "safety_score": 92.4,
         "transport_score": 6.3
       }
     },
@@ -589,7 +589,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.4,
+        "safety_score": 91.2,
         "transport_score": 4.1
       }
     },
@@ -621,7 +621,7 @@
       },
       "scores": {
         "rent_score": 54.8,
-        "safety_score": 98.6,
+        "safety_score": 92.4,
         "transport_score": 3.7
       }
     },
@@ -653,7 +653,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.7,
+        "safety_score": 93.2,
         "transport_score": 2.3
       }
     },
@@ -685,7 +685,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.0,
+        "safety_score": 89.2,
         "transport_score": 0.7
       }
     },
@@ -717,7 +717,7 @@
       },
       "scores": {
         "rent_score": 61.1,
-        "safety_score": 99.1,
+        "safety_score": 95.1,
         "transport_score": 6.2
       }
     },
@@ -749,7 +749,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.4,
+        "safety_score": 86.2,
         "transport_score": 0.3
       }
     },
@@ -781,7 +781,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.1,
+        "safety_score": 84.2,
         "transport_score": 0.7
       }
     },
@@ -813,7 +813,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.7,
+        "safety_score": 87.8,
         "transport_score": 6.0
       }
     },
@@ -845,7 +845,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.7,
+        "safety_score": 87.5,
         "transport_score": 0.5
       }
     },
@@ -877,7 +877,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.9,
+        "safety_score": 72.6,
         "transport_score": 0.0
       }
     },
@@ -909,7 +909,7 @@
       },
       "scores": {
         "rent_score": 44.0,
-        "safety_score": 99.2,
+        "safety_score": 95.8,
         "transport_score": 10.9
       }
     },
@@ -941,7 +941,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 97.0,
         "transport_score": 21.4
       }
     },
@@ -973,7 +973,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 91.8,
+        "safety_score": 55.9,
         "transport_score": 1.8
       }
     },
@@ -1005,7 +1005,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.9,
+        "safety_score": 77.7,
         "transport_score": 2.9
       }
     },
@@ -1037,7 +1037,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 92.8,
+        "safety_score": 61.2,
         "transport_score": 0.0
       }
     },
@@ -1069,7 +1069,7 @@
       },
       "scores": {
         "rent_score": 67.8,
-        "safety_score": 98.9,
+        "safety_score": 93.8,
         "transport_score": 9.9
       }
     },
@@ -1101,7 +1101,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.6,
+        "safety_score": 92.2,
         "transport_score": 9.1
       }
     },
@@ -1133,7 +1133,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.1,
+        "safety_score": 89.5,
         "transport_score": 5.4
       }
     },
@@ -1165,7 +1165,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.2,
+        "safety_score": 90.4,
         "transport_score": 0.0
       }
     },
@@ -1197,7 +1197,7 @@
       },
       "scores": {
         "rent_score": 28.4,
-        "safety_score": 99.2,
+        "safety_score": 95.8,
         "transport_score": 9.8
       }
     },
@@ -1261,7 +1261,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.2,
+        "safety_score": 84.9,
         "transport_score": 6.0
       }
     },
@@ -1293,7 +1293,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.7,
+        "safety_score": 87.8,
         "transport_score": 0.7
       }
     },
@@ -1325,7 +1325,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.1,
+        "safety_score": 84.5,
         "transport_score": 2.2
       }
     },
@@ -1357,7 +1357,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.3,
+        "safety_score": 90.8,
         "transport_score": 0.0
       }
     },
@@ -1389,7 +1389,7 @@
       },
       "scores": {
         "rent_score": 43.5,
-        "safety_score": 99.3,
+        "safety_score": 96.0,
         "transport_score": 9.9
       }
     },
@@ -1421,7 +1421,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.5,
+        "safety_score": 97.6,
         "transport_score": 19.9
       }
     },
@@ -1453,7 +1453,7 @@
       },
       "scores": {
         "rent_score": 66.1,
-        "safety_score": 99.7,
+        "safety_score": 98.3,
         "transport_score": 31.9
       }
     },
@@ -1485,7 +1485,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.8,
         "transport_score": 1.2
       }
     },
@@ -1549,7 +1549,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.2,
+        "safety_score": 90.1,
         "transport_score": 2.6
       }
     },
@@ -1581,7 +1581,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.7,
+        "safety_score": 93.0,
         "transport_score": 3.6
       }
     },
@@ -1613,7 +1613,7 @@
       },
       "scores": {
         "rent_score": 53.5,
-        "safety_score": 99.1,
+        "safety_score": 95.4,
         "transport_score": 13.7
       }
     },
@@ -1645,7 +1645,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.8,
+        "safety_score": 93.5,
         "transport_score": 5.6
       }
     },
@@ -1677,7 +1677,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.0,
+        "safety_score": 94.8,
         "transport_score": 6.5
       }
     },
@@ -1709,7 +1709,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.8,
+        "safety_score": 88.4,
         "transport_score": 4.8
       }
     },
@@ -1741,7 +1741,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.1,
+        "safety_score": 84.6,
         "transport_score": 1.5
       }
     },
@@ -1773,7 +1773,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 91.8,
         "transport_score": 3.3
       }
     },
@@ -1805,7 +1805,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 90.5,
+        "safety_score": 48.7,
         "transport_score": 0.0
       }
     },
@@ -1837,7 +1837,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 82.6,
+        "safety_score": 6.3,
         "transport_score": 0.0
       }
     },
@@ -1869,7 +1869,7 @@
       },
       "scores": {
         "rent_score": 66.1,
-        "safety_score": 99.3,
+        "safety_score": 96.4,
         "transport_score": 17.2
       }
     },
@@ -1901,7 +1901,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 94.1,
         "transport_score": 1.8
       }
     },
@@ -1933,7 +1933,7 @@
       },
       "scores": {
         "rent_score": 38.4,
-        "safety_score": 99.0,
+        "safety_score": 94.4,
         "transport_score": 16.3
       }
     },
@@ -1965,7 +1965,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.1,
+        "safety_score": 95.4,
         "transport_score": 7.7
       }
     },
@@ -1997,7 +1997,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 94.0,
         "transport_score": 7.1
       }
     },
@@ -2061,7 +2061,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.6,
+        "safety_score": 92.2,
         "transport_score": 6.0
       }
     },
@@ -2093,7 +2093,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.0,
+        "safety_score": 89.4,
         "transport_score": 2.1
       }
     },
@@ -2125,7 +2125,7 @@
       },
       "scores": {
         "rent_score": 20.9,
-        "safety_score": 99.4,
+        "safety_score": 96.8,
         "transport_score": 21.2
       }
     },
@@ -2157,7 +2157,7 @@
       },
       "scores": {
         "rent_score": 33.4,
-        "safety_score": 99.2,
+        "safety_score": 95.8,
         "transport_score": 13.9
       }
     },
@@ -2189,7 +2189,7 @@
       },
       "scores": {
         "rent_score": 73.6,
-        "safety_score": 98.6,
+        "safety_score": 92.5,
         "transport_score": 11.0
       }
     },
@@ -2221,7 +2221,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.0,
+        "safety_score": 94.4,
         "transport_score": 3.3
       }
     },
@@ -2253,7 +2253,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 93.1,
+        "safety_score": 62.6,
         "transport_score": 3.7
       }
     },
@@ -2317,7 +2317,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 89.9,
+        "safety_score": 45.5,
         "transport_score": 0.5
       }
     },
@@ -2349,7 +2349,7 @@
       },
       "scores": {
         "rent_score": 42.2,
-        "safety_score": 99.0,
+        "safety_score": 94.4,
         "transport_score": 8.0
       }
     },
@@ -2381,7 +2381,7 @@
       },
       "scores": {
         "rent_score": 68.6,
-        "safety_score": 98.6,
+        "safety_score": 92.7,
         "transport_score": 32.1
       }
     },
@@ -2413,7 +2413,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.7,
+        "safety_score": 87.8,
         "transport_score": 0.3
       }
     },
@@ -2477,7 +2477,7 @@
       },
       "scores": {
         "rent_score": 15.8,
-        "safety_score": 90.4,
+        "safety_score": 48.4,
         "transport_score": 4.3
       }
     },
@@ -2509,7 +2509,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.4,
+        "safety_score": 91.5,
         "transport_score": 2.7
       }
     },
@@ -2541,7 +2541,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.7,
+        "safety_score": 93.2,
         "transport_score": 1.9
       }
     },
@@ -2573,7 +2573,7 @@
       },
       "scores": {
         "rent_score": 48.5,
-        "safety_score": 98.8,
+        "safety_score": 93.4,
         "transport_score": 23.2
       }
     },
@@ -2605,7 +2605,7 @@
       },
       "scores": {
         "rent_score": 46.5,
-        "safety_score": 98.9,
+        "safety_score": 94.1,
         "transport_score": 15.9
       }
     },
@@ -2637,7 +2637,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 94.1,
         "transport_score": 2.1
       }
     },
@@ -2701,7 +2701,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 81.4,
+        "safety_score": 0,
         "transport_score": 0.0
       }
     },
@@ -2765,7 +2765,7 @@
       },
       "scores": {
         "rent_score": 41.0,
-        "safety_score": 99.4,
+        "safety_score": 96.7,
         "transport_score": 64.7
       }
     },
@@ -2797,7 +2797,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.1,
+        "safety_score": 84.3,
         "transport_score": 5.5
       }
     },
@@ -2829,7 +2829,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.9,
+        "safety_score": 72.6,
         "transport_score": 0.5
       }
     },
@@ -2861,7 +2861,7 @@
       },
       "scores": {
         "rent_score": 48.5,
-        "safety_score": 99.0,
+        "safety_score": 94.7,
         "transport_score": 7.7
       }
     },
@@ -2893,7 +2893,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.2,
+        "safety_score": 79.6,
         "transport_score": 0.0
       }
     },
@@ -2925,7 +2925,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.7,
+        "safety_score": 87.8,
         "transport_score": 5.2
       }
     },
@@ -2957,7 +2957,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 87.3,
+        "safety_score": 31.5,
         "transport_score": 0.0
       }
     },
@@ -2989,7 +2989,7 @@
       },
       "scores": {
         "rent_score": 23.4,
-        "safety_score": 98.9,
+        "safety_score": 94.0,
         "transport_score": 15.4
       }
     },
@@ -3021,7 +3021,7 @@
       },
       "scores": {
         "rent_score": 41.0,
-        "safety_score": 97.9,
+        "safety_score": 88.6,
         "transport_score": 13.0
       }
     },
@@ -3053,7 +3053,7 @@
       },
       "scores": {
         "rent_score": 42.2,
-        "safety_score": 99.3,
+        "safety_score": 96.1,
         "transport_score": 16.8
       }
     },
@@ -3085,7 +3085,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.8,
         "transport_score": 12.0
       }
     },
@@ -3117,7 +3117,7 @@
       },
       "scores": {
         "rent_score": 54.8,
-        "safety_score": 97.1,
+        "safety_score": 84.5,
         "transport_score": 5.1
       }
     },
@@ -3149,7 +3149,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.3,
+        "safety_score": 96.3,
         "transport_score": 14.4
       }
     },
@@ -3181,7 +3181,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 92.3,
+        "safety_score": 58.3,
         "transport_score": 0.0
       }
     },
@@ -3213,7 +3213,7 @@
       },
       "scores": {
         "rent_score": 33.4,
-        "safety_score": 98.1,
+        "safety_score": 89.9,
         "transport_score": 12.0
       }
     },
@@ -3245,7 +3245,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 92.3,
+        "safety_score": 58.3,
         "transport_score": 4.8
       }
     },
@@ -3277,7 +3277,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.3,
+        "safety_score": 96.1,
         "transport_score": 31.9
       }
     },
@@ -3309,7 +3309,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.1,
+        "safety_score": 95.3,
         "transport_score": 19.4
       }
     },
@@ -3341,7 +3341,7 @@
       },
       "scores": {
         "rent_score": 46.0,
-        "safety_score": 98.6,
+        "safety_score": 92.7,
         "transport_score": 4.0
       }
     },
@@ -3373,7 +3373,7 @@
       },
       "scores": {
         "rent_score": 54.8,
-        "safety_score": 98.5,
+        "safety_score": 91.7,
         "transport_score": 5.6
       }
     },
@@ -3405,7 +3405,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.1,
+        "safety_score": 89.8,
         "transport_score": 5.6
       }
     },
@@ -3437,7 +3437,7 @@
       },
       "scores": {
         "rent_score": 53.5,
-        "safety_score": 99.0,
+        "safety_score": 94.7,
         "transport_score": 20.2
       }
     },
@@ -3469,7 +3469,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 94.1,
         "transport_score": 5.4
       }
     },
@@ -3501,7 +3501,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 93.9,
+        "safety_score": 67.0,
         "transport_score": 0.0
       }
     },
@@ -3533,7 +3533,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.2,
+        "safety_score": 85.1,
         "transport_score": 0.0
       }
     },
@@ -3565,7 +3565,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.6,
+        "safety_score": 92.7,
         "transport_score": 4.5
       }
     },
@@ -3597,7 +3597,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.4,
+        "safety_score": 85.8,
         "transport_score": 0.0
       }
     },
@@ -3629,7 +3629,7 @@
       },
       "scores": {
         "rent_score": 43.5,
-        "safety_score": 99.2,
+        "safety_score": 95.7,
         "transport_score": 13.7
       }
     },
@@ -3661,7 +3661,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.0,
+        "safety_score": 94.7,
         "transport_score": 10.7
       }
     },
@@ -3693,7 +3693,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.2,
+        "safety_score": 69.0,
         "transport_score": 1.0
       }
     },
@@ -3725,7 +3725,7 @@
       },
       "scores": {
         "rent_score": 18.3,
-        "safety_score": 97.9,
+        "safety_score": 88.5,
         "transport_score": 6.3
       }
     },
@@ -3757,7 +3757,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.1,
+        "safety_score": 95.1,
         "transport_score": 3.0
       }
     },
@@ -3789,7 +3789,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.6,
+        "safety_score": 97.8,
         "transport_score": 18.3
       }
     },
@@ -3821,7 +3821,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.9,
+        "safety_score": 88.5,
         "transport_score": 0.5
       }
     },
@@ -3917,7 +3917,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.9,
+        "safety_score": 88.9,
         "transport_score": 2.3
       }
     },
@@ -3981,7 +3981,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.5,
+        "safety_score": 81.0,
         "transport_score": 2.1
       }
     },
@@ -4013,7 +4013,7 @@
       },
       "scores": {
         "rent_score": 17.1,
-        "safety_score": 98.4,
+        "safety_score": 91.4,
         "transport_score": 7.1
       }
     },
@@ -4045,7 +4045,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.0,
+        "safety_score": 78.7,
         "transport_score": 8.2
       }
     },
@@ -4077,7 +4077,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.5,
+        "safety_score": 70.5,
         "transport_score": 0.0
       }
     },
@@ -4109,7 +4109,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.2,
+        "safety_score": 79.7,
         "transport_score": 0.0
       }
     },
@@ -4141,7 +4141,7 @@
       },
       "scores": {
         "rent_score": 81.2,
-        "safety_score": 99.7,
+        "safety_score": 98.6,
         "transport_score": 28.8
       }
     },
@@ -4173,7 +4173,7 @@
       },
       "scores": {
         "rent_score": 76.1,
-        "safety_score": 99.2,
+        "safety_score": 95.8,
         "transport_score": 11.4
       }
     },
@@ -4205,7 +4205,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.5,
+        "safety_score": 97.1,
         "transport_score": 8.4
       }
     },
@@ -4237,7 +4237,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 97.0,
         "transport_score": 10.6
       }
     },
@@ -4269,7 +4269,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.7,
+        "safety_score": 87.8,
         "transport_score": 1.1
       }
     },
@@ -4301,7 +4301,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.6,
         "transport_score": 6.0
       }
     },
@@ -4333,7 +4333,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.4,
+        "safety_score": 75.4,
         "transport_score": 6.2
       }
     },
@@ -4365,7 +4365,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.3,
+        "safety_score": 85.5,
         "transport_score": 5.5
       }
     },
@@ -4397,7 +4397,7 @@
       },
       "scores": {
         "rent_score": 66.1,
-        "safety_score": 99.4,
+        "safety_score": 97.0,
         "transport_score": 21.0
       }
     },
@@ -4429,7 +4429,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 93.8,
         "transport_score": 2.3
       }
     },
@@ -4461,7 +4461,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 93.8,
         "transport_score": 3.7
       }
     },
@@ -4493,7 +4493,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.1,
+        "safety_score": 89.8,
         "transport_score": 2.1
       }
     },
@@ -4525,7 +4525,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.2,
+        "safety_score": 90.2,
         "transport_score": 2.7
       }
     },
@@ -4557,7 +4557,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 85.1,
+        "safety_score": null,
         "transport_score": 0.0
       }
     },
@@ -4589,7 +4589,7 @@
       },
       "scores": {
         "rent_score": 78.6,
-        "safety_score": 99.4,
+        "safety_score": 96.6,
         "transport_score": 23.1
       }
     },
@@ -4621,7 +4621,7 @@
       },
       "scores": {
         "rent_score": 74.1,
-        "safety_score": 99.4,
+        "safety_score": 96.6,
         "transport_score": 14.3
       }
     },
@@ -4653,7 +4653,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 0,
+        "safety_score": null,
         "transport_score": 12.0
       }
     },
@@ -4685,7 +4685,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 91.7,
+        "safety_score": 55.5,
         "transport_score": 0.4
       }
     },
@@ -4717,7 +4717,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.5,
+        "safety_score": 86.8,
         "transport_score": 5.5
       }
     },
@@ -4749,7 +4749,7 @@
       },
       "scores": {
         "rent_score": 86.2,
-        "safety_score": 99.2,
+        "safety_score": 95.7,
         "transport_score": 9.5
       }
     },
@@ -4781,7 +4781,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.7,
+        "safety_score": 93.0,
         "transport_score": 4.1
       }
     },
@@ -4813,7 +4813,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.7,
+        "safety_score": 93.0,
         "transport_score": 3.2
       }
     },
@@ -4845,7 +4845,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.8,
+        "safety_score": 77.3,
         "transport_score": 2.9
       }
     },
@@ -4877,7 +4877,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 89.9,
+        "safety_score": 45.8,
         "transport_score": 0.0
       }
     },
@@ -4909,7 +4909,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.0,
+        "safety_score": 94.5,
         "transport_score": 7.3
       }
     },
@@ -4941,7 +4941,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.4,
+        "safety_score": 86.2,
         "transport_score": 5.5
       }
     },
@@ -4973,7 +4973,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.0,
+        "safety_score": 94.4,
         "transport_score": 8.5
       }
     },
@@ -5005,7 +5005,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 91.6,
+        "safety_score": 54.9,
         "transport_score": 0.0
       }
     },
@@ -5037,7 +5037,7 @@
       },
       "scores": {
         "rent_score": 0.0,
-        "safety_score": 98.9,
+        "safety_score": 93.8,
         "transport_score": 24.3
       }
     },
@@ -5069,7 +5069,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.8,
+        "safety_score": 72.0,
         "transport_score": 0.0
       }
     },
@@ -5101,7 +5101,7 @@
       },
       "scores": {
         "rent_score": 42.2,
-        "safety_score": 99.4,
+        "safety_score": 96.7,
         "transport_score": 15.0
       }
     },
@@ -5133,7 +5133,7 @@
       },
       "scores": {
         "rent_score": 47.2,
-        "safety_score": 99.6,
+        "safety_score": 97.7,
         "transport_score": 18.3
       }
     },
@@ -5165,7 +5165,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.1,
+        "safety_score": 84.2,
         "transport_score": 2.2
       }
     },
@@ -5197,7 +5197,7 @@
       },
       "scores": {
         "rent_score": 47.2,
-        "safety_score": 99.2,
+        "safety_score": 95.8,
         "transport_score": 7.8
       }
     },
@@ -5229,7 +5229,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.8,
         "transport_score": 12.4
       }
     },
@@ -5261,7 +5261,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.6,
+        "safety_score": 92.4,
         "transport_score": 4.9
       }
     },
@@ -5293,7 +5293,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.1,
+        "safety_score": 89.7,
         "transport_score": 2.2
       }
     },
@@ -5325,7 +5325,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.3,
+        "safety_score": 91.1,
         "transport_score": 2.2
       }
     },
@@ -5357,7 +5357,7 @@
       },
       "scores": {
         "rent_score": 18.3,
-        "safety_score": 97.1,
+        "safety_score": 84.3,
         "transport_score": 20.5
       }
     },
@@ -5389,7 +5389,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.5,
+        "safety_score": 81.2,
         "transport_score": 1.4
       }
     },
@@ -5421,7 +5421,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.2,
+        "safety_score": 85.2,
         "transport_score": 0.0
       }
     },
@@ -5453,7 +5453,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.4,
+        "safety_score": 91.2,
         "transport_score": 5.4
       }
     },
@@ -5485,7 +5485,7 @@
       },
       "scores": {
         "rent_score": 41.0,
-        "safety_score": 98.9,
+        "safety_score": 94.0,
         "transport_score": 16.5
       }
     },
@@ -5517,7 +5517,7 @@
       },
       "scores": {
         "rent_score": 66.1,
-        "safety_score": 99.3,
+        "safety_score": 96.0,
         "transport_score": 8.4
       }
     },
@@ -5549,7 +5549,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 91.8,
         "transport_score": 3.0
       }
     },
@@ -5581,7 +5581,7 @@
       },
       "scores": {
         "rent_score": 38.9,
-        "safety_score": 99.2,
+        "safety_score": 95.5,
         "transport_score": 8.8
       }
     },
@@ -5613,7 +5613,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.3,
+        "safety_score": 90.7,
         "transport_score": 3.6
       }
     },
@@ -5645,7 +5645,7 @@
       },
       "scores": {
         "rent_score": 74.1,
-        "safety_score": 99.4,
+        "safety_score": 96.8,
         "transport_score": 17.6
       }
     },
@@ -5677,7 +5677,7 @@
       },
       "scores": {
         "rent_score": 78.6,
-        "safety_score": 99.5,
+        "safety_score": 97.3,
         "transport_score": 25.3
       }
     },
@@ -5709,7 +5709,7 @@
       },
       "scores": {
         "rent_score": 63.6,
-        "safety_score": 99.3,
+        "safety_score": 96.3,
         "transport_score": 33.7
       }
     },
@@ -5773,7 +5773,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.1,
+        "safety_score": 84.2,
         "transport_score": 4.5
       }
     },
@@ -5805,7 +5805,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.6,
+        "safety_score": 81.9,
         "transport_score": 1.1
       }
     },
@@ -5837,7 +5837,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.7,
+        "safety_score": 77.0,
         "transport_score": 1.4
       }
     },
@@ -5869,7 +5869,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 83.1,
+        "safety_score": null,
         "transport_score": 0.0
       }
     },
@@ -5901,7 +5901,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.2,
+        "safety_score": 90.1,
         "transport_score": 1.8
       }
     },
@@ -5933,7 +5933,7 @@
       },
       "scores": {
         "rent_score": 47.2,
-        "safety_score": 97.5,
+        "safety_score": 86.5,
         "transport_score": 6.9
       }
     },
@@ -5965,7 +5965,7 @@
       },
       "scores": {
         "rent_score": 68.6,
-        "safety_score": 99.6,
+        "safety_score": 97.8,
         "transport_score": 12.0
       }
     },
@@ -6029,7 +6029,7 @@
       },
       "scores": {
         "rent_score": 61.1,
-        "safety_score": 99.4,
+        "safety_score": 97.0,
         "transport_score": 19.9
       }
     },
@@ -6061,7 +6061,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.5,
+        "safety_score": 86.6,
         "transport_score": 1.4
       }
     },
@@ -6093,7 +6093,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.3,
+        "safety_score": 69.3,
         "transport_score": 0.0
       }
     },
@@ -6125,7 +6125,7 @@
       },
       "scores": {
         "rent_score": 3.3,
-        "safety_score": 98.5,
+        "safety_score": 92.1,
         "transport_score": 20.3
       }
     },
@@ -6157,7 +6157,7 @@
       },
       "scores": {
         "rent_score": 18.3,
-        "safety_score": 99.0,
+        "safety_score": 94.5,
         "transport_score": 24.6
       }
     },
@@ -6189,7 +6189,7 @@
       },
       "scores": {
         "rent_score": 51.0,
-        "safety_score": 96.9,
+        "safety_score": 83.3,
         "transport_score": 15.4
       }
     },
@@ -6221,7 +6221,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.8,
+        "safety_score": 82.9,
         "transport_score": 0.7
       }
     },
@@ -6253,7 +6253,7 @@
       },
       "scores": {
         "rent_score": 51.0,
-        "safety_score": 99.0,
+        "safety_score": 94.7,
         "transport_score": 27.7
       }
     },
@@ -6285,7 +6285,7 @@
       },
       "scores": {
         "rent_score": 46.5,
-        "safety_score": 98.9,
+        "safety_score": 94.3,
         "transport_score": 7.7
       }
     },
@@ -6317,7 +6317,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.5,
+        "safety_score": 97.3,
         "transport_score": 32.1
       }
     },
@@ -6349,7 +6349,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.6,
+        "safety_score": 87.2,
         "transport_score": 5.2
       }
     },
@@ -6381,7 +6381,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.6,
         "transport_score": 8.9
       }
     },
@@ -6413,7 +6413,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.0,
+        "safety_score": 94.7,
         "transport_score": 1.4
       }
     },
@@ -6445,7 +6445,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.8,
+        "safety_score": 72.1,
         "transport_score": 1.2
       }
     },
@@ -6477,7 +6477,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.2,
+        "safety_score": 85.1,
         "transport_score": 0.3
       }
     },
@@ -6509,7 +6509,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 92.9,
+        "safety_score": 61.6,
         "transport_score": 0.0
       }
     },
@@ -6541,7 +6541,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.2,
+        "safety_score": 85.1,
         "transport_score": 2.3
       }
     },
@@ -6605,7 +6605,7 @@
       },
       "scores": {
         "rent_score": 78.6,
-        "safety_score": 98.6,
+        "safety_score": 92.7,
         "transport_score": 4.4
       }
     },
@@ -6637,7 +6637,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.1,
+        "safety_score": 78.9,
         "transport_score": 0.0
       }
     },
@@ -6669,7 +6669,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.0,
+        "safety_score": 89.1,
         "transport_score": 5.8
       }
     },
@@ -6701,7 +6701,7 @@
       },
       "scores": {
         "rent_score": 41.0,
-        "safety_score": 99.2,
+        "safety_score": 95.5,
         "transport_score": 30.4
       }
     },
@@ -6733,7 +6733,7 @@
       },
       "scores": {
         "rent_score": 30.9,
-        "safety_score": 99.7,
+        "safety_score": 98.1,
         "transport_score": 26.2
       }
     },
@@ -6797,7 +6797,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 62.4,
+        "safety_score": null,
         "transport_score": 0.0
       }
     },
@@ -6829,7 +6829,7 @@
       },
       "scores": {
         "rent_score": 68.6,
-        "safety_score": 99.0,
+        "safety_score": 94.4,
         "transport_score": 16.1
       }
     },
@@ -6861,7 +6861,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.8,
         "transport_score": 10.7
       }
     },
@@ -6893,7 +6893,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.5,
+        "safety_score": 81.2,
         "transport_score": 0.0
       }
     },
@@ -6925,7 +6925,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.5,
+        "safety_score": 81.2,
         "transport_score": 0.0
       }
     },
@@ -6957,7 +6957,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.8,
+        "safety_score": 93.5,
         "transport_score": 8.9
       }
     },
@@ -6989,7 +6989,7 @@
       },
       "scores": {
         "rent_score": 28.4,
-        "safety_score": 99.1,
+        "safety_score": 95.1,
         "transport_score": 10.6
       }
     },
@@ -7021,7 +7021,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.8,
+        "safety_score": 87.9,
         "transport_score": 2.9
       }
     },
@@ -7053,7 +7053,7 @@
       },
       "scores": {
         "rent_score": 73.6,
-        "safety_score": 99.4,
+        "safety_score": 97.0,
         "transport_score": 14.4
       }
     },
@@ -7085,7 +7085,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.8,
+        "safety_score": 77.3,
         "transport_score": 0.0
       }
     },
@@ -7117,7 +7117,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.0,
+        "safety_score": 94.8,
         "transport_score": 4.5
       }
     },
@@ -7149,7 +7149,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.6,
+        "safety_score": 92.4,
         "transport_score": 5.1
       }
     },
@@ -7181,7 +7181,7 @@
       },
       "scores": {
         "rent_score": 41.0,
-        "safety_score": 99.4,
+        "safety_score": 96.7,
         "transport_score": 40.9
       }
     },
@@ -7213,7 +7213,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.2,
+        "safety_score": 95.7,
         "transport_score": 8.4
       }
     },
@@ -7245,7 +7245,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.4,
+        "safety_score": 91.5,
         "transport_score": 5.1
       }
     },
@@ -7277,7 +7277,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.0,
+        "safety_score": 78.7,
         "transport_score": 0.0
       }
     },
@@ -7309,7 +7309,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.0,
+        "safety_score": 83.8,
         "transport_score": 4.1
       }
     },
@@ -7341,7 +7341,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 93.8,
         "transport_score": 3.8
       }
     },
@@ -7373,7 +7373,7 @@
       },
       "scores": {
         "rent_score": 58.5,
-        "safety_score": 98.0,
+        "safety_score": 89.1,
         "transport_score": 5.1
       }
     },
@@ -7405,7 +7405,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.1,
+        "safety_score": 89.7,
         "transport_score": 5.5
       }
     },
@@ -7437,7 +7437,7 @@
       },
       "scores": {
         "rent_score": 58.5,
-        "safety_score": 97.3,
+        "safety_score": 85.5,
         "transport_score": 5.9
       }
     },
@@ -7469,7 +7469,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.9,
+        "safety_score": 88.8,
         "transport_score": 8.4
       }
     },
@@ -7501,7 +7501,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.8,
+        "safety_score": 93.4,
         "transport_score": 0.1
       }
     },
@@ -7533,7 +7533,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.5,
+        "safety_score": 75.6,
         "transport_score": 0.0
       }
     },
@@ -7565,7 +7565,7 @@
       },
       "scores": {
         "rent_score": 89.9,
-        "safety_score": 99.6,
+        "safety_score": 97.7,
         "transport_score": 25.4
       }
     },
@@ -7597,7 +7597,7 @@
       },
       "scores": {
         "rent_score": 48.5,
-        "safety_score": 98.6,
+        "safety_score": 92.7,
         "transport_score": 4.5
       }
     },
@@ -7629,7 +7629,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.1,
+        "safety_score": 68.1,
         "transport_score": 1.4
       }
     },
@@ -7661,7 +7661,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.1,
+        "safety_score": 79.2,
         "transport_score": 1.1
       }
     },
@@ -7693,7 +7693,7 @@
       },
       "scores": {
         "rent_score": 68.6,
-        "safety_score": 97.8,
+        "safety_score": 88.4,
         "transport_score": 1.8
       }
     },
@@ -7725,7 +7725,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.4,
+        "safety_score": 70.1,
         "transport_score": 0.0
       }
     },
@@ -7757,7 +7757,7 @@
       },
       "scores": {
         "rent_score": 41.0,
-        "safety_score": 99.0,
+        "safety_score": 94.8,
         "transport_score": 11.4
       }
     },
@@ -7789,7 +7789,7 @@
       },
       "scores": {
         "rent_score": 41.0,
-        "safety_score": 98.3,
+        "safety_score": 91.1,
         "transport_score": 2.3
       }
     },
@@ -7821,7 +7821,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.2,
+        "safety_score": 74.0,
         "transport_score": 2.3
       }
     },
@@ -7853,7 +7853,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.5,
+        "safety_score": 76.0,
         "transport_score": 0.8
       }
     },
@@ -7885,7 +7885,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 92.0,
         "transport_score": 2.3
       }
     },
@@ -7917,7 +7917,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.6,
+        "safety_score": 87.1,
         "transport_score": 0.5
       }
     },
@@ -7949,7 +7949,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.6,
+        "safety_score": 81.6,
         "transport_score": 2.9
       }
     },
@@ -7981,7 +7981,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.1,
+        "safety_score": 84.5,
         "transport_score": 1.6
       }
     },
@@ -8013,7 +8013,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.0,
+        "safety_score": 83.9,
         "transport_score": 2.9
       }
     },
@@ -8045,7 +8045,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.0,
+        "safety_score": 89.4,
         "transport_score": 4.4
       }
     },
@@ -8077,7 +8077,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.7,
+        "safety_score": 93.1,
         "transport_score": 6.2
       }
     },
@@ -8109,7 +8109,7 @@
       },
       "scores": {
         "rent_score": 61.1,
-        "safety_score": 98.8,
+        "safety_score": 93.7,
         "transport_score": 8.8
       }
     },
@@ -8141,7 +8141,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.4,
+        "safety_score": 86.1,
         "transport_score": 1.0
       }
     },
@@ -8205,7 +8205,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.8,
+        "safety_score": 82.6,
         "transport_score": 1.8
       }
     },
@@ -8237,7 +8237,7 @@
       },
       "scores": {
         "rent_score": 51.0,
-        "safety_score": 98.3,
+        "safety_score": 90.8,
         "transport_score": 7.1
       }
     },
@@ -8269,7 +8269,7 @@
       },
       "scores": {
         "rent_score": 47.2,
-        "safety_score": 99.4,
+        "safety_score": 96.8,
         "transport_score": 41.9
       }
     },
@@ -8301,7 +8301,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.6,
+        "safety_score": 92.5,
         "transport_score": 10.7
       }
     },
@@ -8333,7 +8333,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.5,
+        "safety_score": 97.4,
         "transport_score": 16.2
       }
     },
@@ -8365,7 +8365,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.4,
+        "safety_score": 91.5,
         "transport_score": 7.7
       }
     },
@@ -8397,7 +8397,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.5,
+        "safety_score": 86.4,
         "transport_score": 2.5
       }
     },
@@ -8429,7 +8429,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.8,
+        "safety_score": 99.0,
         "transport_score": 0.4
       }
     },
@@ -8461,7 +8461,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 94.0,
         "transport_score": 1.4
       }
     },
@@ -8493,7 +8493,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.6,
+        "safety_score": 92.7,
         "transport_score": 4.0
       }
     },
@@ -8525,7 +8525,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.9,
+        "safety_score": 83.5,
         "transport_score": 4.3
       }
     },
@@ -8557,7 +8557,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.0,
+        "safety_score": 89.1,
         "transport_score": 1.2
       }
     },
@@ -8589,7 +8589,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 92.1,
         "transport_score": 7.4
       }
     },
@@ -8621,7 +8621,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.8,
+        "safety_score": 88.1,
         "transport_score": 0.0
       }
     },
@@ -8685,7 +8685,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 93.1,
+        "safety_score": 62.8,
         "transport_score": 5.5
       }
     },
@@ -8717,7 +8717,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 94.0,
         "transport_score": 5.1
       }
     },
@@ -8749,7 +8749,7 @@
       },
       "scores": {
         "rent_score": 78.6,
-        "safety_score": 99.4,
+        "safety_score": 96.6,
         "transport_score": 11.7
       }
     },
@@ -8781,7 +8781,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.9,
+        "safety_score": 83.2,
         "transport_score": 0.0
       }
     },
@@ -8845,7 +8845,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.8,
         "transport_score": 11.8
       }
     },
@@ -8877,7 +8877,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.2,
+        "safety_score": 79.5,
         "transport_score": 1.4
       }
     },
@@ -8909,7 +8909,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.2,
+        "safety_score": 84.9,
         "transport_score": 1.6
       }
     },
@@ -8941,7 +8941,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.6,
+        "safety_score": 81.5,
         "transport_score": 5.8
       }
     },
@@ -8973,7 +8973,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 14.5,
+        "safety_score": null,
         "transport_score": 6.3
       }
     },
@@ -9005,7 +9005,7 @@
       },
       "scores": {
         "rent_score": 66.1,
-        "safety_score": 99.1,
+        "safety_score": 95.1,
         "transport_score": 13.3
       }
     },
@@ -9037,7 +9037,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.6,
+        "safety_score": 71.0,
         "transport_score": 0.0
       }
     },
@@ -9069,7 +9069,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.7,
+        "safety_score": 98.4,
         "transport_score": 0.3
       }
     },
@@ -9101,7 +9101,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.9,
+        "safety_score": 88.8,
         "transport_score": 1.8
       }
     },
@@ -9133,7 +9133,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.7,
+        "safety_score": 93.2,
         "transport_score": 3.3
       }
     },
@@ -9165,7 +9165,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 92.1,
         "transport_score": 5.6
       }
     },
@@ -9197,7 +9197,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.4,
+        "safety_score": 91.4,
         "transport_score": 3.4
       }
     },
@@ -9229,7 +9229,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.3,
+        "safety_score": 79.9,
         "transport_score": 0.0
       }
     },
@@ -9261,7 +9261,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.3,
+        "safety_score": 80.3,
         "transport_score": 0.0
       }
     },
@@ -9293,7 +9293,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 91.8,
         "transport_score": 6.3
       }
     },
@@ -9325,7 +9325,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.7,
+        "safety_score": 92.8,
         "transport_score": 6.2
       }
     },
@@ -9357,7 +9357,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.0,
+        "safety_score": 78.7,
         "transport_score": 0.0
       }
     },
@@ -9389,7 +9389,7 @@
       },
       "scores": {
         "rent_score": 41.0,
-        "safety_score": 98.8,
+        "safety_score": 93.5,
         "transport_score": 34.9
       }
     },
@@ -9421,7 +9421,7 @@
       },
       "scores": {
         "rent_score": 41.0,
-        "safety_score": 99.3,
+        "safety_score": 96.4,
         "transport_score": 26.8
       }
     },
@@ -9453,7 +9453,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 88.1,
+        "safety_score": 36.2,
         "transport_score": 1.4
       }
     },
@@ -9485,7 +9485,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.1,
+        "safety_score": 95.3,
         "transport_score": 5.1
       }
     },
@@ -9517,7 +9517,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 94.1,
         "transport_score": 27.2
       }
     },
@@ -9549,7 +9549,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.6,
+        "safety_score": 86.9,
         "transport_score": 0.0
       }
     },
@@ -9613,7 +9613,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.6,
+        "safety_score": 86.9,
         "transport_score": 1.4
       }
     },
@@ -9645,7 +9645,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.7,
+        "safety_score": 93.0,
         "transport_score": 4.7
       }
     },
@@ -9677,7 +9677,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 87.5,
+        "safety_score": null,
         "transport_score": 0.0
       }
     },
@@ -9709,7 +9709,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.1,
+        "safety_score": 95.1,
         "transport_score": 8.5
       }
     },
@@ -9741,7 +9741,7 @@
       },
       "scores": {
         "rent_score": 7.0,
-        "safety_score": 98.9,
+        "safety_score": 94.0,
         "transport_score": 100.0
       }
     },
@@ -9805,7 +9805,7 @@
       },
       "scores": {
         "rent_score": 100.0,
-        "safety_score": 98.1,
+        "safety_score": 89.5,
         "transport_score": 8.1
       }
     },
@@ -9837,7 +9837,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.7,
+        "safety_score": 93.0,
         "transport_score": 5.2
       }
     },
@@ -9869,7 +9869,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 91.7,
         "transport_score": 7.4
       }
     },
@@ -9901,7 +9901,7 @@
       },
       "scores": {
         "rent_score": 53.5,
-        "safety_score": 99.0,
+        "safety_score": 94.5,
         "transport_score": 9.6
       }
     },
@@ -9933,7 +9933,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.8,
+        "safety_score": 77.6,
         "transport_score": 1.0
       }
     },
@@ -9965,7 +9965,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.7,
         "transport_score": 12.4
       }
     },
@@ -9997,7 +9997,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.9,
+        "safety_score": 72.7,
         "transport_score": 0.3
       }
     },
@@ -10029,7 +10029,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.4,
+        "safety_score": 75.3,
         "transport_score": 0.0
       }
     },
@@ -10061,7 +10061,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.6,
+        "safety_score": 76.3,
         "transport_score": 0.0
       }
     },
@@ -10093,7 +10093,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.3,
+        "safety_score": 96.3,
         "transport_score": 6.5
       }
     },
@@ -10125,7 +10125,7 @@
       },
       "scores": {
         "rent_score": 30.2,
-        "safety_score": 97.9,
+        "safety_score": 88.8,
         "transport_score": 9.8
       }
     },
@@ -10157,7 +10157,7 @@
       },
       "scores": {
         "rent_score": 78.6,
-        "safety_score": 99.4,
+        "safety_score": 97.0,
         "transport_score": 20.7
       }
     },
@@ -10189,7 +10189,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.3,
+        "safety_score": 80.3,
         "transport_score": 0.7
       }
     },
@@ -10221,7 +10221,7 @@
       },
       "scores": {
         "rent_score": 61.1,
-        "safety_score": 99.2,
+        "safety_score": 95.8,
         "transport_score": 14.0
       }
     },
@@ -10253,7 +10253,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.0,
+        "safety_score": 83.9,
         "transport_score": 0.0
       }
     },
@@ -10285,7 +10285,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.8,
+        "safety_score": 88.2,
         "transport_score": 2.2
       }
     },
@@ -10349,7 +10349,7 @@
       },
       "scores": {
         "rent_score": 48.5,
-        "safety_score": 98.1,
+        "safety_score": 89.9,
         "transport_score": 7.3
       }
     },
@@ -10381,7 +10381,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.8,
+        "safety_score": 93.5,
         "transport_score": 4.1
       }
     },
@@ -10413,7 +10413,7 @@
       },
       "scores": {
         "rent_score": 66.1,
-        "safety_score": 99.0,
+        "safety_score": 94.4,
         "transport_score": 5.2
       }
     },
@@ -10445,7 +10445,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 91.7,
         "transport_score": 5.2
       }
     },
@@ -10477,7 +10477,7 @@
       },
       "scores": {
         "rent_score": 53.5,
-        "safety_score": 99.1,
+        "safety_score": 95.0,
         "transport_score": 25.0
       }
     },
@@ -10509,7 +10509,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.8,
+        "safety_score": 87.9,
         "transport_score": 8.9
       }
     },
@@ -10573,7 +10573,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 93.3,
+        "safety_score": 64.1,
         "transport_score": 0.0
       }
     },
@@ -10605,7 +10605,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.6,
         "transport_score": 7.3
       }
     },
@@ -10637,7 +10637,7 @@
       },
       "scores": {
         "rent_score": 53.5,
-        "safety_score": 98.4,
+        "safety_score": 91.5,
         "transport_score": 7.4
       }
     },
@@ -10669,7 +10669,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.7,
         "transport_score": 16.2
       }
     },
@@ -10701,7 +10701,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.1,
+        "safety_score": 73.7,
         "transport_score": 0.0
       }
     },
@@ -10733,7 +10733,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 83.5,
+        "safety_score": 11.4,
         "transport_score": 0.0
       }
     },
@@ -10765,7 +10765,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.8,
+        "safety_score": 77.3,
         "transport_score": 4.8
       }
     },
@@ -10797,7 +10797,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.7,
         "transport_score": 4.3
       }
     },
@@ -10829,7 +10829,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 94.1,
         "transport_score": 5.6
       }
     },
@@ -10861,7 +10861,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 97.0,
         "transport_score": 10.7
       }
     },
@@ -10893,7 +10893,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.7,
+        "safety_score": null,
         "transport_score": 0.0
       }
     },
@@ -10925,7 +10925,7 @@
       },
       "scores": {
         "rent_score": 56.0,
-        "safety_score": 99.6,
+        "safety_score": 97.8,
         "transport_score": 19.1
       }
     },
@@ -10957,7 +10957,7 @@
       },
       "scores": {
         "rent_score": 30.9,
-        "safety_score": 99.3,
+        "safety_score": 96.3,
         "transport_score": 15.1
       }
     },
@@ -10989,7 +10989,7 @@
       },
       "scores": {
         "rent_score": 48.5,
-        "safety_score": 98.9,
+        "safety_score": 94.3,
         "transport_score": 9.8
       }
     },
@@ -11053,7 +11053,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.2,
+        "safety_score": 68.7,
         "transport_score": 0.1
       }
     },
@@ -11085,7 +11085,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.7,
+        "safety_score": 71.3,
         "transport_score": 0.0
       }
     },
@@ -11117,7 +11117,7 @@
       },
       "scores": {
         "rent_score": 73.6,
-        "safety_score": 99.4,
+        "safety_score": 96.8,
         "transport_score": 17.3
       }
     },
@@ -11149,7 +11149,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 92.4,
+        "safety_score": 58.9,
         "transport_score": 0.8
       }
     },
@@ -11181,7 +11181,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.7,
+        "safety_score": 93.0,
         "transport_score": 3.0
       }
     },
@@ -11213,7 +11213,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.5,
+        "safety_score": 97.6,
         "transport_score": 15.1
       }
     },
@@ -11245,7 +11245,7 @@
       },
       "scores": {
         "rent_score": 47.2,
-        "safety_score": 99.1,
+        "safety_score": 95.0,
         "transport_score": 10.6
       }
     },
@@ -11277,7 +11277,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 91.7,
         "transport_score": 6.7
       }
     },
@@ -11309,7 +11309,7 @@
       },
       "scores": {
         "rent_score": 67.3,
-        "safety_score": 99.5,
+        "safety_score": 97.3,
         "transport_score": 15.1
       }
     },
@@ -11341,7 +11341,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.4,
+        "safety_score": 91.4,
         "transport_score": 6.0
       }
     },
@@ -11373,7 +11373,7 @@
       },
       "scores": {
         "rent_score": 25.9,
-        "safety_score": 99.0,
+        "safety_score": 94.4,
         "transport_score": 26.5
       }
     },
@@ -11405,7 +11405,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.6,
+        "safety_score": 92.7,
         "transport_score": 4.1
       }
     },
@@ -11437,7 +11437,7 @@
       },
       "scores": {
         "rent_score": 41.0,
-        "safety_score": 99.4,
+        "safety_score": 97.0,
         "transport_score": 37.0
       }
     },
@@ -11469,7 +11469,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.1,
+        "safety_score": 84.3,
         "transport_score": 2.2
       }
     },
@@ -11501,7 +11501,7 @@
       },
       "scores": {
         "rent_score": 61.1,
-        "safety_score": 98.9,
+        "safety_score": 94.1,
         "transport_score": 10.7
       }
     },
@@ -11533,7 +11533,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 87.8,
+        "safety_score": 34.5,
         "transport_score": 0.0
       }
     },
@@ -11565,7 +11565,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.8,
+        "safety_score": 99.1,
         "transport_score": 0.0
       }
     },
@@ -11629,7 +11629,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 91.9,
+        "safety_score": 56.5,
         "transport_score": 0.0
       }
     },
@@ -11661,7 +11661,7 @@
       },
       "scores": {
         "rent_score": 46.0,
-        "safety_score": 98.3,
+        "safety_score": 91.1,
         "transport_score": 10.6
       }
     },
@@ -11693,7 +11693,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.6,
+        "safety_score": 92.2,
         "transport_score": 4.1
       }
     },
@@ -11725,7 +11725,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.2,
+        "safety_score": 90.4,
         "transport_score": 10.0
       }
     },
@@ -11757,7 +11757,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.3,
+        "safety_score": 96.3,
         "transport_score": 6.3
       }
     },
@@ -11789,7 +11789,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.4,
+        "safety_score": 86.1,
         "transport_score": 0.4
       }
     },
@@ -11821,7 +11821,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.7,
+        "safety_score": 82.0,
         "transport_score": 2.5
       }
     },
@@ -11853,7 +11853,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.8,
+        "safety_score": 93.5,
         "transport_score": 5.9
       }
     },
@@ -11885,7 +11885,7 @@
       },
       "scores": {
         "rent_score": 78.6,
-        "safety_score": 99.7,
+        "safety_score": 98.3,
         "transport_score": 24.7
       }
     },
@@ -11917,7 +11917,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 86.7,
+        "safety_score": 28.4,
         "transport_score": 0.0
       }
     },
@@ -11949,7 +11949,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.8,
+        "safety_score": 77.4,
         "transport_score": 1.8
       }
     },
@@ -11981,7 +11981,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.3,
+        "safety_score": 85.6,
         "transport_score": 0.0
       }
     },
@@ -12013,7 +12013,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 91.7,
         "transport_score": 3.4
       }
     },
@@ -12045,7 +12045,7 @@
       },
       "scores": {
         "rent_score": 53.5,
-        "safety_score": 99.1,
+        "safety_score": 95.1,
         "transport_score": 6.6
       }
     },
@@ -12077,7 +12077,7 @@
       },
       "scores": {
         "rent_score": 23.4,
-        "safety_score": 98.2,
+        "safety_score": 90.5,
         "transport_score": 22.4
       }
     },
@@ -12109,7 +12109,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 93.6,
+        "safety_score": 65.7,
         "transport_score": 0.0
       }
     },
@@ -12205,7 +12205,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 92.0,
         "transport_score": 4.0
       }
     },
@@ -12237,7 +12237,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.8,
+        "safety_score": 88.4,
         "transport_score": 2.3
       }
     },
@@ -12269,7 +12269,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.5,
+        "safety_score": 86.5,
         "transport_score": 1.4
       }
     },
@@ -12333,7 +12333,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.8,
+        "safety_score": 98.7,
         "transport_score": 16.8
       }
     },
@@ -12365,7 +12365,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.9,
+        "safety_score": 72.6,
         "transport_score": 0.1
       }
     },
@@ -12397,7 +12397,7 @@
       },
       "scores": {
         "rent_score": 4.5,
-        "safety_score": 98.6,
+        "safety_score": 92.7,
         "transport_score": 16.2
       }
     },
@@ -12429,7 +12429,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 93.9,
+        "safety_score": 67.1,
         "transport_score": 2.5
       }
     },
@@ -12461,7 +12461,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 92.0,
+        "safety_score": 57.0,
         "transport_score": 0.0
       }
     },
@@ -12493,7 +12493,7 @@
       },
       "scores": {
         "rent_score": 28.4,
-        "safety_score": 98.6,
+        "safety_score": 92.7,
         "transport_score": 24.7
       }
     },
@@ -12525,7 +12525,7 @@
       },
       "scores": {
         "rent_score": 53.5,
-        "safety_score": 99.5,
+        "safety_score": 97.3,
         "transport_score": 52.7
       }
     },
@@ -12557,7 +12557,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.9,
+        "safety_score": 77.9,
         "transport_score": 1.4
       }
     },
@@ -12621,7 +12621,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.8,
+        "safety_score": 77.2,
         "transport_score": 1.0
       }
     },
@@ -12653,7 +12653,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.9,
+        "safety_score": 83.3,
         "transport_score": 0.0
       }
     },
@@ -12685,7 +12685,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.1,
+        "safety_score": 84.6,
         "transport_score": 0.0
       }
     },
@@ -12717,7 +12717,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 89.0,
+        "safety_score": null,
         "transport_score": 0.0
       }
     },
@@ -12749,7 +12749,7 @@
       },
       "scores": {
         "rent_score": 66.1,
-        "safety_score": 98.0,
+        "safety_score": 89.2,
         "transport_score": 2.2
       }
     },
@@ -12781,7 +12781,7 @@
       },
       "scores": {
         "rent_score": 66.1,
-        "safety_score": 99.7,
+        "safety_score": 98.1,
         "transport_score": 54.3
       }
     },
@@ -12813,7 +12813,7 @@
       },
       "scores": {
         "rent_score": 15.8,
-        "safety_score": 99.4,
+        "safety_score": 96.8,
         "transport_score": 45.5
       }
     },
@@ -12845,7 +12845,7 @@
       },
       "scores": {
         "rent_score": 61.1,
-        "safety_score": 99.1,
+        "safety_score": 95.3,
         "transport_score": 18.7
       }
     },
@@ -12877,7 +12877,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.8,
+        "safety_score": 93.5,
         "transport_score": 4.9
       }
     },
@@ -12909,7 +12909,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.0,
+        "safety_score": 94.5,
         "transport_score": 8.4
       }
     },
@@ -12941,7 +12941,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.6,
+        "safety_score": 76.1,
         "transport_score": 5.2
       }
     },
@@ -12973,7 +12973,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.7,
+        "safety_score": 82.0,
         "transport_score": 1.1
       }
     },
@@ -13005,7 +13005,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.8,
+        "safety_score": 93.7,
         "transport_score": 7.3
       }
     },
@@ -13037,7 +13037,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 94.3,
         "transport_score": 4.1
       }
     },
@@ -13069,7 +13069,7 @@
       },
       "scores": {
         "rent_score": 58.5,
-        "safety_score": 99.6,
+        "safety_score": 97.7,
         "transport_score": 19.0
       }
     },
@@ -13101,7 +13101,7 @@
       },
       "scores": {
         "rent_score": 73.6,
-        "safety_score": 99.4,
+        "safety_score": 96.8,
         "transport_score": 9.6
       }
     },
@@ -13133,7 +13133,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.6,
+        "safety_score": 92.4,
         "transport_score": 9.2
       }
     },
@@ -13197,7 +13197,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 92.1,
         "transport_score": 2.7
       }
     },
@@ -13229,7 +13229,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.8,
+        "safety_score": 93.7,
         "transport_score": 0.7
       }
     },
@@ -13261,7 +13261,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 93.8,
         "transport_score": 7.4
       }
     },
@@ -13293,7 +13293,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.1,
+        "safety_score": 79.0,
         "transport_score": 1.6
       }
     },
@@ -13325,7 +13325,7 @@
       },
       "scores": {
         "rent_score": 63.6,
-        "safety_score": 98.2,
+        "safety_score": 90.2,
         "transport_score": 7.1
       }
     },
@@ -13357,7 +13357,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.3,
+        "safety_score": 90.8,
         "transport_score": 1.2
       }
     },
@@ -13389,7 +13389,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.1,
+        "safety_score": 95.1,
         "transport_score": 14.7
       }
     },
@@ -13421,7 +13421,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.7,
+        "safety_score": 82.0,
         "transport_score": 1.9
       }
     },
@@ -13453,7 +13453,7 @@
       },
       "scores": {
         "rent_score": 61.1,
-        "safety_score": 98.1,
+        "safety_score": 89.9,
         "transport_score": 3.7
       }
     },
@@ -13485,7 +13485,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.4,
+        "safety_score": 86.2,
         "transport_score": 1.2
       }
     },
@@ -13517,7 +13517,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.1,
+        "safety_score": 84.2,
         "transport_score": 1.1
       }
     },
@@ -13549,7 +13549,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.9,
+        "safety_score": 78.2,
         "transport_score": 0.4
       }
     },
@@ -13581,7 +13581,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.3,
+        "safety_score": 69.3,
         "transport_score": 1.2
       }
     },
@@ -13613,7 +13613,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.8,
+        "safety_score": 82.9,
         "transport_score": 0.5
       }
     },
@@ -13645,7 +13645,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.9,
+        "safety_score": 78.0,
         "transport_score": 2.9
       }
     },
@@ -13677,7 +13677,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.7,
+        "safety_score": 92.8,
         "transport_score": 1.6
       }
     },
@@ -13709,7 +13709,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.6,
+        "safety_score": 87.1,
         "transport_score": 0.0
       }
     },
@@ -13741,7 +13741,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.6,
+        "safety_score": 87.1,
         "transport_score": 3.2
       }
     },
@@ -13805,7 +13805,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 94.3,
         "transport_score": 4.7
       }
     },
@@ -13837,7 +13837,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.1,
+        "safety_score": 79.0,
         "transport_score": 5.9
       }
     },
@@ -13869,7 +13869,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.3,
+        "safety_score": 85.6,
         "transport_score": 2.2
       }
     },
@@ -13901,7 +13901,7 @@
       },
       "scores": {
         "rent_score": 15.8,
-        "safety_score": 98.6,
+        "safety_score": 92.7,
         "transport_score": 22.1
       }
     },
@@ -13933,7 +13933,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 97.0,
         "transport_score": 15.2
       }
     },
@@ -13997,7 +13997,7 @@
       },
       "scores": {
         "rent_score": 15.8,
-        "safety_score": 99.0,
+        "safety_score": 94.8,
         "transport_score": 30.2
       }
     },
@@ -14029,7 +14029,7 @@
       },
       "scores": {
         "rent_score": 10.8,
-        "safety_score": 98.9,
+        "safety_score": 94.1,
         "transport_score": 18.7
       }
     },
@@ -14061,7 +14061,7 @@
       },
       "scores": {
         "rent_score": 47.2,
-        "safety_score": 96.8,
+        "safety_score": 82.8,
         "transport_score": 3.4
       }
     },
@@ -14093,7 +14093,7 @@
       },
       "scores": {
         "rent_score": 61.1,
-        "safety_score": 99.3,
+        "safety_score": 96.1,
         "transport_score": 12.9
       }
     },
@@ -14125,7 +14125,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.0,
+        "safety_score": 94.8,
         "transport_score": 6.7
       }
     },
@@ -14157,7 +14157,7 @@
       },
       "scores": {
         "rent_score": 86.2,
-        "safety_score": 99.5,
+        "safety_score": 97.6,
         "transport_score": 21.4
       }
     },
@@ -14189,7 +14189,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.1,
+        "safety_score": 84.2,
         "transport_score": 0.0
       }
     },
@@ -14221,7 +14221,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.8,
+        "safety_score": 82.9,
         "transport_score": 1.0
       }
     },
@@ -14253,7 +14253,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.1,
+        "safety_score": 89.5,
         "transport_score": 1.5
       }
     },
@@ -14285,7 +14285,7 @@
       },
       "scores": {
         "rent_score": 33.4,
-        "safety_score": 99.1,
+        "safety_score": 95.1,
         "transport_score": 45.3
       }
     },
@@ -14317,7 +14317,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.5,
+        "safety_score": 91.8,
         "transport_score": 11.4
       }
     },
@@ -14349,7 +14349,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.8,
+        "safety_score": 82.8,
         "transport_score": 4.7
       }
     },
@@ -14381,7 +14381,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.9,
+        "safety_score": 78.2,
         "transport_score": 0.0
       }
     },
@@ -14413,7 +14413,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.3,
+        "safety_score": 74.6,
         "transport_score": 0.0
       }
     },
@@ -14445,7 +14445,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 93.8,
         "transport_score": 6.0
       }
     },
@@ -14477,7 +14477,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.7,
+        "safety_score": 77.0,
         "transport_score": 1.1
       }
     },
@@ -14509,7 +14509,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.2,
+        "safety_score": 90.5,
         "transport_score": 1.0
       }
     },
@@ -14541,7 +14541,7 @@
       },
       "scores": {
         "rent_score": 81.2,
-        "safety_score": 99.6,
+        "safety_score": 97.7,
         "transport_score": 34.2
       }
     },
@@ -14573,7 +14573,7 @@
       },
       "scores": {
         "rent_score": 88.7,
-        "safety_score": 98.2,
+        "safety_score": 90.5,
         "transport_score": 14.3
       }
     },
@@ -14605,7 +14605,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 93.8,
         "transport_score": 5.9
       }
     },
@@ -14637,7 +14637,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.3,
+        "safety_score": 96.1,
         "transport_score": 12.1
       }
     },
@@ -14669,7 +14669,7 @@
       },
       "scores": {
         "rent_score": 48.5,
-        "safety_score": 98.9,
+        "safety_score": 94.1,
         "transport_score": 15.7
       }
     },
@@ -14701,7 +14701,7 @@
       },
       "scores": {
         "rent_score": 78.6,
-        "safety_score": 98.9,
+        "safety_score": 94.3,
         "transport_score": 4.0
       }
     },
@@ -14733,7 +14733,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.7,
+        "safety_score": 98.6,
         "transport_score": 20.7
       }
     },
@@ -14797,7 +14797,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.3,
+        "safety_score": 96.1,
         "transport_score": 4.8
       }
     },
@@ -14829,7 +14829,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.1,
+        "safety_score": 95.1,
         "transport_score": 10.2
       }
     },
@@ -14861,7 +14861,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.0,
+        "safety_score": 83.6,
         "transport_score": 3.8
       }
     },
@@ -14893,7 +14893,7 @@
       },
       "scores": {
         "rent_score": 42.2,
-        "safety_score": 99.4,
+        "safety_score": 96.6,
         "transport_score": 15.0
       }
     },
@@ -14925,7 +14925,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.2,
+        "safety_score": 95.7,
         "transport_score": 8.4
       }
     },
@@ -14957,7 +14957,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.9,
+        "safety_score": 88.5,
         "transport_score": 2.1
       }
     },
@@ -14989,7 +14989,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.7,
+        "safety_score": 87.6,
         "transport_score": 1.2
       }
     },
@@ -15021,7 +15021,7 @@
       },
       "scores": {
         "rent_score": 78.6,
-        "safety_score": 99.2,
+        "safety_score": 95.7,
         "transport_score": 18.3
       }
     },
@@ -15053,7 +15053,7 @@
       },
       "scores": {
         "rent_score": 61.1,
-        "safety_score": 99.3,
+        "safety_score": 96.0,
         "transport_score": 23.1
       }
     },
@@ -15085,7 +15085,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.7,
+        "safety_score": 87.6,
         "transport_score": 0.3
       }
     },
@@ -15117,7 +15117,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 92.0,
+        "safety_score": 57.2,
         "transport_score": 0.0
       }
     },
@@ -15149,7 +15149,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.0,
+        "safety_score": 68.0,
         "transport_score": 0.0
       }
     },
@@ -15181,7 +15181,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.8,
+        "safety_score": 88.2,
         "transport_score": 0.0
       }
     },
@@ -15213,7 +15213,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 92.9,
+        "safety_score": 61.9,
         "transport_score": 0.0
       }
     },
@@ -15245,7 +15245,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.3,
+        "safety_score": 74.6,
         "transport_score": 0.8
       }
     },
@@ -15277,7 +15277,7 @@
       },
       "scores": {
         "rent_score": 28.4,
-        "safety_score": 99.0,
+        "safety_score": 94.8,
         "transport_score": 22.7
       }
     },
@@ -15309,7 +15309,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.7,
+        "safety_score": 82.5,
         "transport_score": 3.8
       }
     },
@@ -15373,7 +15373,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.6,
+        "safety_score": 81.5,
         "transport_score": 3.3
       }
     },
@@ -15437,7 +15437,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.6,
         "transport_score": 13.3
       }
     },
@@ -15469,7 +15469,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 89.0,
+        "safety_score": 40.8,
         "transport_score": 0.0
       }
     },
@@ -15501,7 +15501,7 @@
       },
       "scores": {
         "rent_score": 78.6,
-        "safety_score": 97.1,
+        "safety_score": 84.5,
         "transport_score": 7.3
       }
     },
@@ -15533,7 +15533,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.6,
+        "safety_score": 87.1,
         "transport_score": 3.3
       }
     },
@@ -15565,7 +15565,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 92.5,
+        "safety_score": 59.9,
         "transport_score": 0.1
       }
     },
@@ -15597,7 +15597,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 91.6,
+        "safety_score": 54.6,
         "transport_score": 0.0
       }
     },
@@ -15629,7 +15629,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.3,
+        "safety_score": 79.9,
         "transport_score": 3.2
       }
     },
@@ -15661,7 +15661,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.6,
+        "safety_score": 92.5,
         "transport_score": 5.8
       }
     },
@@ -15693,7 +15693,7 @@
       },
       "scores": {
         "rent_score": 46.5,
-        "safety_score": 99.0,
+        "safety_score": 94.8,
         "transport_score": 6.9
       }
     },
@@ -15725,7 +15725,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.1,
+        "safety_score": 95.3,
         "transport_score": 9.8
       }
     },
@@ -15789,7 +15789,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 93.8,
         "transport_score": 3.2
       }
     },
@@ -15821,7 +15821,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.6,
+        "safety_score": 71.1,
         "transport_score": 0.0
       }
     },
@@ -15853,7 +15853,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.7,
+        "safety_score": 87.8,
         "transport_score": 2.1
       }
     },
@@ -15885,7 +15885,7 @@
       },
       "scores": {
         "rent_score": 63.6,
-        "safety_score": 99.1,
+        "safety_score": 95.4,
         "transport_score": 6.3
       }
     },
@@ -15917,7 +15917,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.2,
+        "safety_score": 95.5,
         "transport_score": 18.1
       }
     },
@@ -15949,7 +15949,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.2,
+        "safety_score": 79.6,
         "transport_score": 1.6
       }
     },
@@ -15981,7 +15981,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.6,
+        "safety_score": 76.3,
         "transport_score": 1.0
       }
     },
@@ -16013,7 +16013,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.6,
+        "safety_score": 92.5,
         "transport_score": 6.6
       }
     },
@@ -16045,7 +16045,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.8,
+        "safety_score": 82.9,
         "transport_score": 0.5
       }
     },
@@ -16077,7 +16077,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 94.3,
         "transport_score": 3.3
       }
     },
@@ -16109,7 +16109,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.1,
+        "safety_score": 89.8,
         "transport_score": 0.7
       }
     },
@@ -16141,7 +16141,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.0,
+        "safety_score": 89.1,
         "transport_score": 5.2
       }
     },
@@ -16173,7 +16173,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.3,
+        "safety_score": 90.7,
         "transport_score": 3.0
       }
     },
@@ -16237,7 +16237,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.6,
+        "safety_score": 87.4,
         "transport_score": 1.6
       }
     },
@@ -16269,7 +16269,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.0,
+        "safety_score": 89.4,
         "transport_score": 0.8
       }
     },
@@ -16301,7 +16301,7 @@
       },
       "scores": {
         "rent_score": 89.9,
-        "safety_score": 99.7,
+        "safety_score": 98.1,
         "transport_score": 34.9
       }
     },
@@ -16333,7 +16333,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 96.4,
+        "safety_score": 80.5,
         "transport_score": 1.9
       }
     },
@@ -16365,7 +16365,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 95.0,
+        "safety_score": 72.8,
         "transport_score": 1.4
       }
     },
@@ -16397,7 +16397,7 @@
       },
       "scores": {
         "rent_score": 72.4,
-        "safety_score": 99.0,
+        "safety_score": 94.5,
         "transport_score": 8.7
       }
     },
@@ -16429,7 +16429,7 @@
       },
       "scores": {
         "rent_score": 25.9,
-        "safety_score": 98.1,
+        "safety_score": 89.9,
         "transport_score": 10.7
       }
     },
@@ -16461,7 +16461,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.3,
+        "safety_score": 90.7,
         "transport_score": 5.2
       }
     },
@@ -16493,7 +16493,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.8,
         "transport_score": 14.4
       }
     },
@@ -16525,7 +16525,7 @@
       },
       "scores": {
         "rent_score": 81.2,
-        "safety_score": 98.2,
+        "safety_score": 90.2,
         "transport_score": 3.4
       }
     },
@@ -16557,7 +16557,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 87.3,
+        "safety_score": 31.8,
         "transport_score": 0.0
       }
     },
@@ -16589,7 +16589,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.9,
+        "safety_score": 93.8,
         "transport_score": 4.7
       }
     },
@@ -16621,7 +16621,7 @@
       },
       "scores": {
         "rent_score": 60.3,
-        "safety_score": 99.0,
+        "safety_score": 94.5,
         "transport_score": 11.4
       }
     },
@@ -16653,7 +16653,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.9,
+        "safety_score": 72.4,
         "transport_score": 0.8
       }
     },
@@ -16685,7 +16685,7 @@
       },
       "scores": {
         "rent_score": 28.4,
-        "safety_score": 97.6,
+        "safety_score": 87.4,
         "transport_score": 13.7
       }
     },
@@ -16717,7 +16717,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.5,
+        "safety_score": 97.3,
         "transport_score": 5.1
       }
     },
@@ -16749,7 +16749,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.1,
+        "safety_score": 89.5,
         "transport_score": 4.1
       }
     },
@@ -16781,7 +16781,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 84.5,
+        "safety_score": 16.7,
         "transport_score": 0.0
       }
     },
@@ -16813,7 +16813,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.5,
+        "safety_score": 86.8,
         "transport_score": 1.9
       }
     },
@@ -16845,7 +16845,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 99.4,
+        "safety_score": 96.6,
         "transport_score": 8.7
       }
     },
@@ -16877,7 +16877,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 98.4,
+        "safety_score": 91.4,
         "transport_score": 2.5
       }
     },
@@ -16909,7 +16909,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 88.5,
+        "safety_score": 38.1,
         "transport_score": 1.4
       }
     },
@@ -16941,7 +16941,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 92.9,
+        "safety_score": 61.9,
         "transport_score": 0.0
       }
     },
@@ -16973,7 +16973,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.4,
+        "safety_score": 86.2,
         "transport_score": 0.5
       }
     },
@@ -17005,7 +17005,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.1,
+        "safety_score": 84.3,
         "transport_score": 2.2
       }
     },
@@ -17037,7 +17037,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 97.0,
+        "safety_score": 83.6,
         "transport_score": 3.0
       }
     },
@@ -17069,7 +17069,7 @@
       },
       "scores": {
         "rent_score": 61.1,
-        "safety_score": 99.2,
+        "safety_score": 95.5,
         "transport_score": 13.3
       }
     },
@@ -17101,7 +17101,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 94.9,
+        "safety_score": 72.4,
         "transport_score": 0.0
       }
     },
@@ -17133,7 +17133,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 85.3,
+        "safety_score": null,
         "transport_score": 0.0
       }
     },
@@ -17165,7 +17165,7 @@
       },
       "scores": {
         "rent_score": null,
-        "safety_score": 80.7,
+        "safety_score": null,
         "transport_score": 0.0
       }
     }

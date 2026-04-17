@@ -114,7 +114,7 @@ function formatCurrency(value: number | null | undefined) {
           {{ formatValue(props.suburbData?.distance_to_cbd_km, ' km') }}
         </p>
         <p class="mb-2">
-          <strong>Median Rent:</strong>
+          <strong>Representative Rent (2-bed):</strong>
           {{ formatCurrency(props.suburbData?.median_rent) }}
         </p>
         <p class="mb-2">
@@ -132,7 +132,7 @@ function formatCurrency(value: number | null | undefined) {
     <div class="card mb-3" id="averagecompare">
       <div class="card-body">
         <p class="mb-2">
-          <strong>Median Rent:</strong>
+          <strong>Representative Rent (2-bed):</strong>
           <span>
             {{ getDeviationText(props.suburbData?.median_rent, props.averages?.median_rent) }}
           </span>

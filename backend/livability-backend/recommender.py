@@ -100,11 +100,11 @@ class SuburbRecommender:
         # Crime — use rate per 1,000 population when available
         rate_1000 = s["crime"].get("offence_rate_1000")
         population = s["crime"].get("population")
-        if rate_1000 is not None and population is not None and population >= 100:
+        if rate_1000 is not None and population is not None and population >= 150:
             all_rates = [sub["crime"]["offence_rate_1000"]
                         for sub in self.suburbs_list
                         if sub["crime"].get("offence_rate_1000") is not None
-                        and (sub["crime"].get("population") or 0) >= 100]
+                        and (sub["crime"].get("population") or 0) >= 150]
             if all_rates:
                 avg_rate = round(np.mean(all_rates))
                 if rate_1000 < avg_rate:

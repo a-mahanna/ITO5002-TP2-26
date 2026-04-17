@@ -87,7 +87,7 @@ function transportAccessibilityScore() {
             {{ formatValue(props.suburbData?.transport?.weighted_score) }}
           </p>
             <p class="mb-0 text-muted small">
-              This score reflects weighted public transport availability nearby. We are intentionally showing the accessibility score rather than raw stop counts.
+              Weighted score = (train stations &times; 10) + (tram stops &times; 5) + (bus stops &times; 1), then normalised to 0&ndash;100 across all suburbs. Rail is weighted higher to reflect its capacity, frequency, and network reach compared to bus.
             </p>
           </div>
         </div>
@@ -102,7 +102,7 @@ function transportAccessibilityScore() {
               {{ formatValue(props.suburbData?.crime_rate) }}
             </p>
             <p class="mb-0 text-muted small">
-              Crime rate normalised by population. Suburbs with very small populations (under 100) are excluded from safety scoring.
+              Crime rate normalised by population. Suburbs with very small populations (under 150) are typically industrial or commercial zones and are excluded from safety scoring to prevent misleading per-capita rates.
             </p>
           </div>
         </div>
