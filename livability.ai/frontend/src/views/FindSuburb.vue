@@ -307,7 +307,8 @@ async function runSearch() {
           </p>
           <p class="mb-0">
             <strong>Transport:</strong> We display a transport accessibility score rather than raw stop counts so the
-            interface is easier to interpret.
+            interface is easier to interpret. Note: suburb size can influence transport scores &mdash; larger suburbs
+            naturally contain more stops. Use as a general indicator only.
           </p>
         </div>
       </div>

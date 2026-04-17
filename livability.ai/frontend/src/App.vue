@@ -50,7 +50,8 @@ function getLogo() {
         safety.
         Public transport statistics are sourced from the Transport Victoria public transport lines and stops data, with
         suburb boundaries provided by the Australian Bureau of Statistics Australian Statistical Geography Standard (ASGS)
-        Edition 3.
+        Edition 3. Transport scores can be influenced by suburb size — larger suburbs naturally contain more stops — and
+        should be treated as a general indicator only.
       </p>
       <p class="mb-0 footer-copy">&copy; 2026 Livability.ai. All rights reserved.</p>
     </footer>

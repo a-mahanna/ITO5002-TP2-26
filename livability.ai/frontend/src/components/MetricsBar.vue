@@ -87,7 +87,7 @@ function transportAccessibilityScore() {
             {{ formatValue(props.suburbData?.transport?.weighted_score) }}
           </p>
             <p class="mb-0 text-muted small">
-              Weighted score = (train stations &times; 10) + (tram stops &times; 5) + (bus stops &times; 1), then normalised to 0&ndash;100 across all suburbs. Rail is weighted higher to reflect its capacity, frequency, and network reach compared to bus.
+              Weighted score = (train stations &times; 10) + (tram stops &times; 5) + (bus stops &times; 1), then normalised to 0&ndash;100 across all suburbs. Rail is weighted higher to reflect its capacity, frequency, and network reach compared to bus. Note: suburb size can influence transport scores &mdash; larger suburbs naturally contain more stops. Use as a general indicator only.
             </p>
           </div>
         </div>
