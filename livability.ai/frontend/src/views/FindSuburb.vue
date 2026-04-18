@@ -201,7 +201,7 @@ async function runSearch() {
 
           <div class="col-12 col-md-6">
             <label for="safetyWeight" class="form-label">
-              Crime Rate: {{ Math.round(safetyWeight * 100) }}%
+              Crime Rate Importance: {{ Math.round(safetyWeight * 100) }}%
             </label>
             <input id="safetyWeight" v-model="safetyWeight" type="range" class="form-range" min="0" max="1"
               step="0.1" />

@@ -30,7 +30,7 @@ function transportAccessibilityScore() {
 </script>
 
 <template>
-  <div class="container mt-5">
+  <div class="container mt-2">
     <div class="row g-3 align-items-stretch">
       <div class="col-12 col-md-4 d-flex">
         <div class="card flex-fill shadow-sm" id="rentbreakdown">

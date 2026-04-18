@@ -132,21 +132,21 @@ function formatCurrency(value: number | null | undefined) {
     <div class="card mb-3" id="averagecompare">
       <div class="card-body">
         <p class="mb-2">
-          <strong>Representative Rent (2-bed):</strong>
+          <strong>Representative Rent (2-bed): </strong>
           <span>
             {{ getDeviationText(props.suburbData?.median_rent, props.averages?.median_rent) }}
           </span>
         </p>
 
         <p class="mb-2">
-          <strong>Crime:</strong>
+          <strong>Crime: </strong>
           <span>
             {{ getDeviationText(props.suburbData?.crime_rate, props.averages?.crime_rate) }}
           </span>
         </p>
 
         <p class="mb-0">
-          <strong>Transport Accessibility:</strong>
+          <strong>Transport Accessibility: </strong>
           <span>
             {{ getDeviationText(
               getTransportAccessibilityScore(props.suburbData),

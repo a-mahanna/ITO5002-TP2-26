@@ -138,16 +138,10 @@ onMounted(() => {
       </div>
 
     </div>
-    <div class="row justify-content-center">
-      <MetricsBar :selected-suburb="currentSelectedSuburb" :suburb-data="suburbData" :averages="averages"
-        :loading="loading" :error="error" :selected-metric="selectedMetric" />
-    </div>
-  </div>
-
-  <div v-if="suburbData" class="row justify-content-center mt-3">
-  <div class="col-12 d-flex justify-content-center">
+      <div v-if="suburbData" class="row justify-content-center mt-3">
+  <div class="row d-flex justify-content-center">
     <button
-      class="btn btn-dark px-4"
+      class="border border-light-subtle rounded btn btn-dark"
       @click="loadSimilarSuburbs"
       :disabled="similarLoading || !selectedSuburbName"
     >
@@ -155,6 +149,12 @@ onMounted(() => {
     </button>
   </div>
 </div>
+    <div class="row justify-content-center">
+      <MetricsBar :selected-suburb="currentSelectedSuburb" :suburb-data="suburbData" :averages="averages"
+        :loading="loading" :error="error" :selected-metric="selectedMetric" />
+    </div>
+  </div>
+
 <section v-if="showSimilarPanel" class="row justify-content-center mt-4 mb-4">
   <div class="col-12">
     <div class="border border-light-subtle rounded p-4">
@@ -204,7 +204,7 @@ onMounted(() => {
             </div>
 
             <p class="mb-2">
-              <strong>Crime rate (per 1,000):</strong>
+              <strong>Offences per 1,000 residents:</strong>
               {{ formatNumber(item.crime?.offence_rate_1000, 0) }}
             </p>
 
