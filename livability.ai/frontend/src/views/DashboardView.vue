@@ -189,10 +189,19 @@ onMounted(() => {
               {{ formatNumber(item.similarity_score *100, 1) }}%
             </p>
 
-            <p class="mb-2">
-              <strong>2 bed flat rent:</strong>
-              {{ formatCurrency(item.rent?.['2bed_flat']) }}
-            </p>
+            <p class="mb-1"><strong>Rent breakdown (weekly):</strong></p>
+            <div class="row mb-2 small">
+              <div class="col-6">
+                <p class="mb-1">1 bed flat: {{ formatCurrency(item.rent?.['1bed_flat']) }}</p>
+                <p class="mb-1">2 bed flat: {{ formatCurrency(item.rent?.['2bed_flat']) }}</p>
+                <p class="mb-1">3 bed flat: {{ formatCurrency(item.rent?.['3bed_flat']) }}</p>
+              </div>
+              <div class="col-6">
+                <p class="mb-1">2 bed house: {{ formatCurrency(item.rent?.['2bed_house']) }}</p>
+                <p class="mb-1">3 bed house: {{ formatCurrency(item.rent?.['3bed_house']) }}</p>
+                <p class="mb-1">4 bed house: {{ formatCurrency(item.rent?.['4bed_house']) }}</p>
+              </div>
+            </div>
 
             <p class="mb-2">
               <strong>Crime rate (per 1,000):</strong>
